@@ -1,0 +1,16 @@
+<!--pages/index/components/project/index.wxml-->
+<view class="ui-wrap container">
+    <view class="title">主题项目</view>
+    <view class="ui-boxShadow content">
+        <image src="../../../../image/test/2.png" class="img" mode="widthFix" />
+        <view class="desc">研学主题课程-A</view>
+    </view>
+    <view class="ui-boxShadow content">
+        <image src="../../../../image/test/1.png" mode="widthFix" class="img" />
+        <view class="desc">研学主题课程-B</view>
+    </view>
+    <view class="ui-boxShadow content">
+        <image src="../../../../image/test/3.png" mode="widthFix" class="img" />
+        <view class="desc">研学主题课程-C</view>
+    </view>
+</view>

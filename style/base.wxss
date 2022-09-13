@@ -1,0 +1,45 @@
+.clamp2{
+    flex-shrink: 0;
+    font-size: 24rpx;
+    color: #333;
+    display: -webkit-box;
+    height: 72rpx;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: 36rpx;	
+}
+.ui-btn{
+    color: #fff;
+    height: 56rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fd9f33;
+    border-radius: 28rpx;
+    font-size: 24rpx;
+}
+.ui-btn-big{
+    height: 80rpx;
+    border-radius: 40rpx;
+    font-size: 30rpx;
+}
+.ui-btn::after{
+    content: none;
+}
+.ui-btn.ui-btn-ghost{
+    background: none;
+}
+.ui-btn.ui-btn-ghost.ui-btn-red{
+    border: 1rpx solid #fd9f33;
+    color: #fd9f33;
+}
+.ui-boxShadow{
+    box-shadow: 0rpx 0rpx 10rpx 5rpx rgba(0, 0, 0, .05);
+}
+.ui-wrap{
+    width: 690rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}

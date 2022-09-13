@@ -1,0 +1,16 @@
+/**app.wxss**/
+@import 'style/iconfont.wxss';
+@import 'style/iconfont-color.wxss';
+
+page{
+  background-color: #f6f6f6;
+}
+text{
+    font-size: 24rpx;
+}
+button{
+    font-size: 24rpx;
+}
+input{
+    font-size: 24rpx;
+}

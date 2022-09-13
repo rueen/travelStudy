@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'icon';  /* Project id 3639189 */
+    src: url('//at.alicdn.com/t/c/font_3639189_jicmx3bi8rq.woff2?t=1663073120211') format('woff2'),
+         url('//at.alicdn.com/t/c/font_3639189_jicmx3bi8rq.woff?t=1663073120211') format('woff'),
+         url('//at.alicdn.com/t/c/font_3639189_jicmx3bi8rq.ttf?t=1663073120211') format('truetype');
+  }
+
+.icon {
+    font-family: "icon" !important;
+    font-size: 32rpx;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-user1:before {
+    content: "\e7ae";
+  }
+  
+  .icon-user:before {
+    content: "\e60c";
+  }
+  
+  .icon-cate1:before {
+    content: "\e606";
+  }
+  
+  .icon-cate4:before {
+    content: "\e607";
+  }
+  
+  .icon-cate3:before {
+    content: "\e608";
+  }
+  
+  .icon-cate5:before {
+    content: "\e609";
+  }
+  
+  .icon-cate6:before {
+    content: "\e60a";
+  }
+  
+  .icon-cate2:before {
+    content: "\e60b";
+  }
+  
+  .icon-gonggong-wujieguo:before {
+    content: "\e65c";
+  }
+  
+  .icon-clockIn:before {
+    content: "\e600";
+  }
+  
+  .icon-appcenter:before {
+    content: "\e601";
+  }
+  
+  .icon-location:before {
+    content: "\e602";
+  }
+  
+  .icon-home:before {
+    content: "\e603";
+  }
+  
+  .icon-study:before {
+    content: "\e604";
+  }
+  
+  .icon-map:before {
+    content: "\e605";
+  }
+  

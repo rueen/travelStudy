@@ -1,0 +1,6 @@
+<!--pages/study/index.wxml-->
+<nav title="研学" />
+<view class="container" style="padding-top: 150rpx;">
+    <t-icon prefix="icon" name="gonggong-wujieguo" size="100rpx" color="#999" />
+    <view style="color: #999; margin-top: 20rpx;text-align: center;font-size: 24rpx;">敬请期待...</view>
+</view>

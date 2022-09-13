@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "nav": "/components/nav/index",
+        "head": "./components/head/index",
+        "task": "./components/task/index",
+        "serviceBtn": "./components/serviceBtn/index"
+    }
+}

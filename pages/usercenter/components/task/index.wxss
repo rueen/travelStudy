@@ -1,0 +1,48 @@
+/* pages/usercenter/components/task/index.wxss */
+@import '/style/base.wxss';
+.container{
+    background-color: #fff;
+    border-radius: 16rpx;
+    padding: 20rpx;
+    margin-top: -50rpx;
+    box-sizing: border-box;
+}
+.titleWrap{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    color: #111;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.rightWrap{
+    display: flex;
+    align-items: center;
+}
+.more{
+    font-size: 24rpx;
+    color: #999;
+}
+.taskList{
+    padding-top: 20rpx;
+}
+.taskItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0;
+}
+.taskLeft{
+    display: flex;
+    align-items: center;
+}
+.taskName{
+    font-size: 24rpx;
+    color: #000;
+    margin-right: 5rpx;
+}
+.reward{
+    color: #dc9448;
+    margin-left: 5rpx;
+}

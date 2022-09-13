@@ -1,0 +1,17 @@
+/* pages/index/components/banner/index.wxss */
+@import '/style/base.wxss';
+.container{
+    width: 690rpx;
+    margin-top: 20rpx;
+    box-sizing: border-box;
+    border-radius: 16rpx;
+    overflow: hidden;
+}
+.swiper{
+    height: 300rpx;
+}
+.img {
+    width: 690rpx;
+    height: 300rpx;
+    border-radius: 16rpx;
+}

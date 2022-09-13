@@ -1,0 +1,11 @@
+<!--pages/usercenter/components/serviceBtn/index.wxml-->
+<view class="serviceBtnWrap">
+    <view class="serviceBtn" bindtap="openService">
+        <view class="left">
+            <image src="../../../../image/head.png" class="serviceHead" mode="widthFix"></image>
+            <text class="serviceText1">数字人一键解答</text>
+            <text class="serviceText2">行前咨询/行中咨询/行后反馈</text>
+        </view>
+        <t-icon name="chevron-right" size="16" color="#999" />
+    </view>
+</view>

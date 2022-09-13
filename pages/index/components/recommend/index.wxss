@@ -1,0 +1,40 @@
+/* pages/index/components/recommend/index.wxss */
+@import '/style/base.wxss';
+.container{
+    margin-top: 30rpx;
+}
+.title{
+    color: #111;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.content{
+    width: 690rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+.item{
+    width: 335rpx;
+    height: 500rpx;
+    border-radius: 16rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.img{
+    width: 295rpx;
+    height: 320rpx;
+}
+.price{
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    font-size: 26rpx;
+    margin-top: 10rpx;
+}
+.goodsTitle{
+    margin-top: 10rpx;
+}

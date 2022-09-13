@@ -1,0 +1,10 @@
+<!--pages/usercenter/index.wxml-->
+<nav
+    title="我的"
+    isShowLocation="{{false}}"
+    background="#e3d9d1"
+/>
+<head />
+<task />
+<serviceBtn />
+

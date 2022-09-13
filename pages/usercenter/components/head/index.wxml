@@ -1,0 +1,8 @@
+<!--pages/usercenter/components/head/index.wxml-->
+<view class="container">
+    <view class="avatarBox" bindtap="login">
+        <!-- <image src="https://cdn-we-retail.ym.tencent.com/retail-ui/components-exp/avatar/avatar-v2/1.png" mode="aspectFill" class="avatar"></image> -->
+        <t-icon prefix="icon" name="user" size="44rpx" color="#bebebe" />
+    </view>
+    <text class="userName" bindtap="login">请登录</text>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/index/components/banner/index.wxml-->
+<view class="ui-wrap ui-boxShadow container">
+    <swiper
+        indicator-dots="{{true}}"
+        autoplay="{{false}}"
+        interval="{{2000}}"
+        duration="{{500}}"
+        indicator-color="rgba(118, 101, 77, .3)"
+        indicator-active-color="#6f5025"
+        class="swiper"
+    >
+        <swiper-item class="swiperItem">
+            <image src="../../../../image/test/2.png" class="img" mode="aspectFill" />
+        </swiper-item>
+        <swiper-item>
+            <image src="../../../../image/test/3.png" class="img" mode="aspectFill" />
+        </swiper-item>
+        <swiper-item>
+            <image src="../../../../image/test/1.png" class="img" mode="aspectFill" />
+        </swiper-item>
+    </swiper>
+</view>
+

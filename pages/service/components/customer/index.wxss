@@ -1,0 +1,21 @@
+/* pages/service/components/customer/index.wxss */
+.container{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 28rpx;
+  margin-top: 50rpx;
+}
+.content{
+  max-width: 488rpx;
+  background-color: #fff;
+  border-radius: 20rpx 0 20rpx 20rpx;
+  padding: 22rpx 30rpx;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #fff;
+  /* background-color: #ee7874;  */
+  /* background-color: #2aa88b; */
+  /* background-color: #ccae83; */
+  background-color: #fd9f33;
+  line-height: 44rpx;
+}

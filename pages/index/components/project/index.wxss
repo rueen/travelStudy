@@ -1,0 +1,25 @@
+/* pages/index/components/project/index.wxss */
+@import '/style/base.wxss';
+.container{
+    margin-top: 30rpx;
+}
+.title{
+    color: #111;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.content{
+    background-color: #fff;
+    border-radius: 16rpx;
+    padding: 20rpx;
+    margin-top: 20rpx;
+}
+.img{
+    width: 100%;
+    border-radius: 8rpx;
+}
+.desc{
+    font-size: 24rpx;
+    color: #333;
+    margin-top: 10rpx;
+}

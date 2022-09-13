@@ -1,0 +1,4 @@
+<!--pages/service/components/time/time.wxml-->
+<view class="timeWrap">
+  <text class="time">{{now}}</text>
+</view>

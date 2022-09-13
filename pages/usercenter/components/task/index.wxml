@@ -1,0 +1,22 @@
+<!--pages/usercenter/components/task/index.wxml-->
+<view class="ui-wrap ui-boxShadow container">
+    <view class="titleWrap">
+        <text class="title">打卡任务</text>
+        <view class="rightWrap">
+            <text class="more">查看全部</text>
+            <t-icon name="chevron-right" size="16" color="#999" />
+        </view>
+    </view>
+    <view class="taskList">
+        <view class="taskItem" wx:for="{{[1,2,3]}}" wx:key="index">
+            <view class="taskLeft">
+                <text class="taskName">任务{{index + 1}}</text>
+                <t-icon prefix="iconColor" name="jinbi" size="30rpx"/>
+                <text class="reward">+20金币</text>
+            </view>
+            <view class="taskRight">
+                <button class="ui-btn ui-btn-red ui-btn-ghost">去完成</button>
+            </view>
+        </view>
+    </view>
+</view>

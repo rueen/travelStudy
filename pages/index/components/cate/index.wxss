@@ -1,0 +1,30 @@
+/* pages/index/components/cate/index.wxss */
+@import '/style/base.wxss';
+.container{
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    width: 80rpx;
+    height: 80rpx;
+    background-color: #e3d9d1;
+    border-radius: 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    color: #333;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}

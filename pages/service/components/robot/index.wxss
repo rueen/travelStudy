@@ -1,0 +1,21 @@
+/* pages/service/components/robot/index.wxss */
+.container{
+  display: flex;
+  padding: 0 28rpx;
+  margin-top: 50rpx;
+}
+.head{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+.content{
+  max-width: 488rpx;
+  background-color: #fff;
+  border-radius: 0 20rpx 20rpx 20rpx;
+  padding: 22rpx 30rpx;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #000;
+  line-height: 44rpx;
+}

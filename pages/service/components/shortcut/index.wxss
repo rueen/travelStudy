@@ -1,0 +1,23 @@
+/* pages/service/components/shortcut/index.wxss */
+.container{
+  display: flex;
+  padding-left: 28rpx;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
+.item{
+  width: 150rpx;
+  height: 160rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.itemText{
+  color: #333;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}

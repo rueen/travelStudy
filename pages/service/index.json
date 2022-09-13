@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav": "/components/nav/index",
+    "time": "./components/time/index",
+    "customer": "./components/customer/index",
+    "robot": "./components/robot/index",
+    "shortcut": "./components/shortcut/index"
+  }
+}

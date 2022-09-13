@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/index",
+        "pages/map/index",
+        "pages/service/index",
+        "pages/study/index",
+        "pages/clockIn/index",
+        "pages/usercenter/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "研学游",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#000000",
+        "selectedColor": "#000000",
+        "backgroundColor": "#000000",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/study/index",
+                "text": "研学"
+            },
+            {
+                "pagePath": "pages/map/index",
+                "text": "地图"
+            },
+            {
+                "pagePath": "pages/clockIn/index",
+                "text": "打卡"
+            },
+            {
+                "pagePath": "pages/usercenter/index",
+                "text": "我的"
+            }
+        ]
+    },
+    "lazyCodeLoading": "requiredComponents",
+    "sitemapLocation": "sitemap.json"
+}

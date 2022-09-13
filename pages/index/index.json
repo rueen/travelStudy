@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "nav": "/components/nav/index",
+        "banner": "./components/banner/index",
+        "cate": "./components/cate/index",
+        "project": "./components/project/index",
+        "clockIn": "./components/clockIn/index",
+        "recommend": "./components/recommend/index"
+    }
+}

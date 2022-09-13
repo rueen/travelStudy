@@ -1,0 +1,7 @@
+<!--pages/service/components/robot/index.wxml-->
+<view class="container">
+  <image src="../../../../image/head.png" class="head" mode="widthFix"></image>
+  <view class="content">
+    <slot></slot>
+  </view>
+</view>

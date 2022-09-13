@@ -1,0 +1,13 @@
+/* components/nav/index.wxss */
+.nav-title {
+    font-size: 30rpx !important;
+    color: #000!important;
+}
+.slot-left{
+    display: flex;
+    align-items: center;
+}
+.locationText{
+    font-size: 26rpx;
+    color: #333;
+}

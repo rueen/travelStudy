@@ -1,0 +1,17 @@
+<!--components/nav/index.wxml-->
+<t-navbar
+    title="{{title}}"
+    leftIcon="slot"
+    t-class-title="nav-title"
+    background="{{background}}"
+>
+    <view slot="left-icon" class="slot-left">
+        <block wx:if="{{isGoBack}}">
+            <t-icon name="chevron-left" size="40rpx" color="#333" bindtap="goBack" />
+        </block>
+        <block wx:if="{{isShowLocation}}">
+            <t-icon prefix="icon" name="location" size="32rpx" color="#fd9f33" />
+            <text class="locationText">杭州</text>
+        </block>
+    </view>
+</t-navbar>

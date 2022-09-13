@@ -1,0 +1,31 @@
+/* pages/usercenter/components/head/index.wxss */
+@import '/style/base.wxss';
+.container{
+    padding: 30rpx;
+    background-color: #e3d9d1;
+    padding-bottom: 70rpx;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.avatarBox{
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 44rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f2;
+    border: 4rpx solid #fff;
+    box-sizing: border-box;
+}
+.avatar{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50rpx;
+}
+.userName{
+    font-size: 30rpx;
+    font-weight: bold;
+    padding-left: 20rpx;
+}

@@ -1,0 +1,6 @@
+<!--pages/service/components/customer/index.wxml-->
+<view class="container">
+  <view class="content">
+    <slot></slot>
+  </view>
+</view>
