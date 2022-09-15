@@ -11,3 +11,28 @@
     font-size: 26rpx;
     color: #333;
 }
+
+.container{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.left{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30rpx;
+}
+.title{
+    font-size: 30rpx !important;
+    color: #000!important;
+}

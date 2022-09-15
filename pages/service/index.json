@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "nav": "/components/nav/index",
+    "layout": "/components/layout/index",
     "time": "./components/time/index",
     "customer": "./components/customer/index",
     "robot": "./components/robot/index",

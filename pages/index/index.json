@@ -1,6 +1,7 @@
 {
     "usingComponents": {
         "nav": "/components/nav/index",
+        "layout": "/components/layout/index",
         "banner": "./components/banner/index",
         "cate": "./components/cate/index",
         "project": "./components/project/index",

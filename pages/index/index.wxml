@@ -1,7 +1,9 @@
 <!--pages/index/index.wxml-->
 <nav title="研学游" />
-<banner></banner>
-<cate/>
-<project />
-<clockIn />
-<recommend />
+<layout>
+    <banner></banner>
+    <cate/>
+    <project />
+    <clockIn />
+    <recommend />
+</layout>

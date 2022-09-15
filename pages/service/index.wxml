@@ -1,14 +1,16 @@
 <!--pages/service/index.wxml-->
 <nav title="数字人问答" isShowLocation="{{false}}" />
-<time />
-<robot>
-  <text>请问有什么可以帮助您的呢?</text>
-</robot>
-<shortcut />
-<customer>
-  <text>行前需要准备什么?</text>
-</customer>
-<robot>
-  <text>请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢?</text>
-</robot>
+<layout>
+    <time />
+    <robot>
+    <text>请问有什么可以帮助您的呢?</text>
+    </robot>
+    <shortcut />
+    <customer>
+    <text>行前需要准备什么?</text>
+    </customer>
+    <robot>
+    <text>请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢请问有什么可以帮助您的呢?</text>
+    </robot>
+</layout>
 

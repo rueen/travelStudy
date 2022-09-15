@@ -1,5 +1,7 @@
 <!--package/webViewPage/index.wxml-->
 <nav title="{{title}}" isShowLocation="{{false}}" />
-<view class="container">
-    <rich-text nodes="{{content}}"></rich-text>
-</view>
+<layout>
+    <view class="container">
+        <rich-text nodes="{{content}}"></rich-text>
+    </view>
+</layout>

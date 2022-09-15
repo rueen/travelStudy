@@ -1,6 +1,7 @@
 {
     "usingComponents": {
         "nav": "/components/nav/index",
+        "layout": "/components/layout/index",
         "head": "./components/head/index",
         "task": "./components/task/index",
         "serviceBtn": "./components/serviceBtn/index"

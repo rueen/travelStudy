@@ -1,7 +1,6 @@
 {
     "component": true,
     "usingComponents": {
-        "t-icon": "tdesign-miniprogram/icon/icon",
-        "t-navbar": "tdesign-miniprogram/navbar/navbar"
+        "t-icon": "tdesign-miniprogram/icon/icon"
     }
 }

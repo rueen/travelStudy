@@ -1,4 +1,6 @@
 // components/nav/index.js
+const { globalData } = getApp();
+
 Component({
     /**
      * 组件的属性列表
@@ -23,7 +25,8 @@ Component({
      * 组件的初始数据
      */
     data: {
-
+        statusBarHeight: globalData.statusBarHeight,
+        navbarHeight: 44 + globalData.statusBarHeight
     },
     
     lifetimes: {
@@ -35,6 +38,12 @@ Component({
                 })
             }
         },
+        attached(){
+            const navbarHeight = globalData.isIos ? 44 : 48;
+            this.setData({
+                navbarHeight: navbarHeight + globalData.statusBarHeight
+            })
+        }
     },
 
     /**

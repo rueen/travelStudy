@@ -1,4 +1,6 @@
 // pages/usercenter/components/serviceBtn/index.js
+import { navigateTo } from '../../../../utils/navigate';
+
 Component({
     /**
      * 组件的属性列表
@@ -19,8 +21,8 @@ Component({
      */
     methods: {
         openService(){
-            wx.navigateTo({
-                url: '/pages/service/index'
+            navigateTo({
+                router: 'Service'
             })
         }
     }

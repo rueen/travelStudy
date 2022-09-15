@@ -1,4 +1,5 @@
 import config from '../config';
+import { navigateTo } from '../utils/navigate';
 
 const request = async (
     {url = '/', data = {}, method = 'GET', isShowLoading = false, isHideFailTips = true} = {}
@@ -13,12 +14,17 @@ const request = async (
             method,
             success(res) {
                 const { returnCode, msg, data } = res.data;
-                if(~~returnCode === 200){
+                if(`${returnCode}` === '0014'){
+                    // 需要重新授权登录
+                    navigateTo({
+                        router: 'Login'
+                    })
+                } else if(`${returnCode}` === '200'){
                     resolve({
                         success: true,
                         data
                     })
-                } else {
+                } else if(`${returnCode}` === '0011') {
                     if(isHideFailTips){
                         wx.showToast({
                             title: msg,

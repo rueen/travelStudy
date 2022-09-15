@@ -4,7 +4,10 @@
     isShowLocation="{{false}}"
     background="#e3d9d1"
 />
-<head />
-<task />
-<serviceBtn />
+<layout>
+    <head />
+    <task />
+    <serviceBtn />
+</layout>
+
 

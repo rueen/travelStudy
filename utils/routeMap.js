@@ -5,6 +5,7 @@ const routeMap = {
     Map: '/pages/map/index',
     ClockIn: '/pages/clockIn/index',
     UserCenter: '/pages/usercenter/index',
+    Service: '/pages/service/index',
     WebViewPage: '/package/webViewPage/index'
 }
 

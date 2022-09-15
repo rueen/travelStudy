@@ -1,3 +1,4 @@
 <!--pages/map/index.wxml-->
 <nav title="地图" />
+<layout></layout>
 
