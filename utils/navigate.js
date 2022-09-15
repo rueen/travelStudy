@@ -1,6 +1,7 @@
 import routeMap from './routeMap';
 
 const navigateTo = ({ router, extras = {}}) => {
+    console.log(`${routeMap[router]}?dataObj=${JSON.stringify(extras)}`)
     wx.navigateTo({
         url: `${routeMap[router]}?dataObj=${JSON.stringify(extras)}`,
         success: function (res) {

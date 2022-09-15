@@ -28,3 +28,8 @@
         </button>
     </view>
 </view>
+<view class="agreementWrap">
+    <text bindtap="openProtocolPage">《注册协议》</text>
+    <text class="and">和</text>
+    <text bindtap="openPolicyPage">《隐私政策》</text>
+</view>

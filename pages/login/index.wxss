@@ -79,3 +79,17 @@ page{
     margin-left: 10rpx;
     font-size: 30rpx;
 }
+.agreementWrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+    display: flex;
+    justify-content: center;
+    color: #333;
+    margin-bottom: 20rpx;
+}
+.and{
+    padding: 0 5rpx;
+}

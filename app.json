@@ -1,13 +1,28 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/login/index",
         "pages/map/index",
         "pages/service/index",
         "pages/study/index",
         "pages/clockIn/index",
-        "pages/usercenter/index"
+        "pages/usercenter/index",
+        "pages/login/index"
     ],
+    "preloadRule": {
+        "pages/index/index": {
+            "network": "all",
+            "packages": [
+              "otherPackage"
+            ]
+        }
+    },
+    "subpackages": [{
+        "root": "package",
+        "name": "otherPackage",
+        "pages": [
+            "webViewPage/index"
+        ]
+    }],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",

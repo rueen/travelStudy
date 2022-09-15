@@ -1,4 +1,6 @@
 // pages/login/index.js
+import { commonServer } from '../../server/index';
+import { navigateTo } from '../../utils/navigate';
 const app = getApp();
 const safeArea = app.globalData.safeArea || {};
 
@@ -32,42 +34,36 @@ Page({
 
     },
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
     getPhoneNumber (e) {
         console.log(e.detail.code)
     },
 
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
+    // 打卡注册协议
+    async openProtocolPage(){
+        const { success, data } = await commonServer.protocol();
 
+        if(success){
+            navigateTo({
+                router: 'WebViewPage',
+                extras: {
+                    title: '注册协议',
+                    content: data.content
+                }
+            })
+        }
+    },
+    // 打卡隐私政策页面
+    async openPolicyPage(){
+        const { success, data } = await commonServer.policy();
+
+        if(success){
+            navigateTo({
+                router: 'WebViewPage',
+                extras: {
+                    title: '隐私政策',
+                    content: data.content
+                }
+            })
+        }
     }
 })
