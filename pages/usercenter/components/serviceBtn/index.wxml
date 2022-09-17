@@ -6,6 +6,6 @@
             <text class="serviceText1">数字人一键解答</text>
             <text class="serviceText2">行前咨询/行中咨询/行后反馈</text>
         </view>
-        <t-icon name="chevron-right" size="16" color="#999" />
+        <icon name="chevron-right" size="16" color="#999" />
     </view>
 </view>

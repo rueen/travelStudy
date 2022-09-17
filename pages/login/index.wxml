@@ -3,11 +3,11 @@
     <nav title="请登录" isShowLocation="{{false}}" />
     <!-- <view class="loginWrap">
         <view class="fieldItem">
-            <t-icon name="mobile" size="40rpx" color="#999" />
+            <icon name="mobile" size="40rpx" color="#999" />
             <input class="weui-input phoneInput" placeholder="请输入手机号"/>
         </view>
         <view class="fieldItem">
-            <t-icon name="code" size="40rpx" color="#999" />
+            <icon name="code" size="40rpx" color="#999" />
             <input class="weui-input codeInput" placeholder="请输入验证码"/>
             <view class="getCodeWrap">
                 <text class="getCode">获取验证码</text>
@@ -23,7 +23,7 @@
             <text class="logoText">研学游</text>
         </view>
         <button class="ui-btn ui-btn-big loginBtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
-            <t-icon name="logo-wechat" size="52rpx" color="#fff" />
+            <icon name="logo-wechat" size="52rpx" color="#fff" />
             <text class="loginBtnText">微信账号快捷登录</text>
         </button>
     </view>

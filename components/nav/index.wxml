@@ -3,10 +3,10 @@
 <view style="height: {{navbarHeight}}px; padding-top: {{statusBarHeight}}px; background: {{background}}" class="container">
     <view class="left">
         <block wx:if="{{isGoBack}}">
-            <t-icon name="chevron-left" size="40rpx" color="#333" bindtap="goBack" />
+            <icon name="chevron-left" size="40rpx" color="#333" bindtap="goBack" />
         </block>
         <block wx:if="{{isShowLocation}}">
-            <t-icon prefix="icon" name="location" size="32rpx" color="#fd9f33" />
+            <icon prefix="icon" name="location" size="32rpx" color="#fd9f33" />
             <text class="locationText">杭州</text>
         </block>
     </view>

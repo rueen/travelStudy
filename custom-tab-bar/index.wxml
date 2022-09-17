@@ -9,7 +9,7 @@
     >
         <view class="iconWrap">
             <view class="icon">
-                <t-icon prefix="icon" name="{{item.icon}}" size="46rpx" color="#000" />
+                <icon prefix="icon" name="{{item.icon}}" size="46rpx" color="#000" />
             </view>
         </view>
         <view class="text">{{ item.text }}</view>

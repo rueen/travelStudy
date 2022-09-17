@@ -1,6 +1,6 @@
 {
-  "component": true,
-  "usingComponents": {
-    "t-icon": "tdesign-miniprogram/icon/icon"
-  }
+"component": true,
+    "usingComponents": {
+        "icon": "/components/icon/index"
+    }
 }

@@ -1,3 +1,0 @@
-<view class="{{prefix}}-class {{ classPrefix }} {{ border ? 'hairline--top-bottom' : '' }}">
-  <slot />
-</view>
