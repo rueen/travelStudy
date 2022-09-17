@@ -1,2 +1,2 @@
 <!--components/icon/index.wxml-->
-<view class="{{prefix}} {{prefix}}-{{name}}" style="font-size: {{size}};color: {{color}};"></view>
+<text class="{{prefix}} {{prefix}}-{{name}}" style="font-size: {{size}};color: {{color}};"></text>

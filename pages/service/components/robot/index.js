@@ -4,7 +4,10 @@ Component({
      * 组件的属性列表
      */
     properties: {
-
+        isShowContent: {
+            type: Boolean,
+            value: false
+        }
     },
 
     /**
@@ -12,6 +15,12 @@ Component({
      */
     data: {
 
+    },
+
+    lifetimes: {
+        attached(){
+            
+        }
     },
 
     /**

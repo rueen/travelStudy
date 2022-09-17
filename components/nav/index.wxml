@@ -3,7 +3,7 @@
 <view style="height: {{navbarHeight}}px; padding-top: {{statusBarHeight}}px; background: {{background}}" class="container">
     <view class="left">
         <block wx:if="{{isGoBack}}">
-            <icon name="chevron-left" size="40rpx" color="#333" bindtap="goBack" />
+            <icon name="arrow-l" size="40rpx" color="#333" bindtap="goBack" />
         </block>
         <block wx:if="{{isShowLocation}}">
             <icon prefix="icon" name="location" size="32rpx" color="#fd9f33" />

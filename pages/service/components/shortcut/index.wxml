@@ -1,25 +1,9 @@
 <!--pages/service/components/shortcut/index.wxml-->
 <scroll-view scroll-x="true">
   <view class="container" style="width: {{180*5 + 'rpx'}};">
-    <view class="item">
+    <view class="item" wx:for="{{list}}" wx:key="id" bindtap="bindtapItem" data-item="{{item}}">
         <icon name="service" size="56rpx" color="#333" />
-        <text class="itemText">行前咨询</text>
-    </view>
-    <view class="item">
-        <icon name="service" size="56rpx" color="#333" />
-        <text class="itemText">行中咨询</text>
-    </view>
-    <view class="item">
-        <icon name="service" size="56rpx" color="#333" />
-        <text class="itemText">行后反馈</text>
-    </view>
-    <view class="item">
-        <icon name="service" size="56rpx" color="#333" />
-        <text class="itemText">问题反馈1</text>
-    </view>
-    <view class="item">
-        <icon name="service" size="56rpx" color="#333" />
-        <text class="itemText">问题反馈2</text>
+        <text class="itemText">{{item.title}}</text>
     </view>
   </view>
 </scroll-view>

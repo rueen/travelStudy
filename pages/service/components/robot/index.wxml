@@ -1,7 +1,12 @@
 <!--pages/service/components/robot/index.wxml-->
 <view class="container">
-  <image src="../../../../image/head.png" class="head" mode="widthFix"></image>
-  <view class="content">
-    <slot></slot>
-  </view>
+    <image src="../../../../image/head.png" class="head" mode="widthFix"></image>
+    <view class="content">
+        <view class="animationBox" wx:if="{{!isShowContent}}">
+            <view class="animationItem move1"></view>
+            <view class="animationItem move2"></view>
+            <view class="animationItem move3"></view>
+        </view>
+        <slot></slot>
+    </view>
 </view>

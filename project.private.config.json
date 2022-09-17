@@ -4,5 +4,18 @@
     "setting": {
         "compileHotReLoad": true
     },
-    "libVersion": "2.26.0"
+    "libVersion": "2.26.0",
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "数字人问答",
+                    "pathName": "pages/service/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    }
 }
