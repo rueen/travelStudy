@@ -2,7 +2,7 @@
 <nav
     title="我的"
     isShowLocation="{{false}}"
-    background="#e3d9d1"
+    background="#fcca3b"
 />
 <layout>
     <head />

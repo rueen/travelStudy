@@ -2,7 +2,8 @@
 @import '/style/base.wxss';
 .container{
     padding: 30rpx;
-    background-color: #e3d9d1;
+    /* background-color: #e3d9d1; */
+    background-color: #fcca3b;
     padding-bottom: 70rpx;
     display: flex;
     align-items: center;

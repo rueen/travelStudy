@@ -1,5 +1,5 @@
 // pages/login/index.js
-import { commonServer } from '../../server/index';
+import { commonServer, authServer } from '../../server/index';
 import { navigateTo } from '../../utils/navigate';
 const app = getApp();
 const safeArea = app.globalData.safeArea || {};
@@ -34,8 +34,49 @@ Page({
 
     },
 
-    getPhoneNumber (e) {
-        console.log(e.detail.code)
+    wxLogin() {
+        return new Promise((resolve) => {
+            wx.login({
+                success: res => {
+                    console.log(res, '--res')
+                    resolve(res.code);
+                }
+            });
+        })
+    },
+
+    async getPhoneNumber (e) {
+        const { code, encryptedData, iv } = e.detail;
+        const { success, data } = await authServer.phoneNumber({
+            code
+        });
+
+        if(success){
+            const _code = await this.wxLogin();
+            const { phone } = data;
+            this.login({
+                code: _code,
+                phone,
+                encryptedData,
+                iv
+            })
+        }
+    },
+
+    async login(params = {}){
+        const { code, phone, encryptedData, iv } = params;
+        const { success, data } = await authServer.wxLogin({
+            code, phone, encryptedData, iv
+        });
+        if(success){
+            wx.setStorageSync('userInfo', data);
+            let rememberRouter = wx.getStorageSync('rememberRouter');
+            // 记忆路由，哪里来哪里去
+            wx.redirectTo({
+                url: `/${rememberRouter}`
+            })
+            wx.removeStorageSync('rememberRouter');
+        }
     },
 
     // 打卡注册协议

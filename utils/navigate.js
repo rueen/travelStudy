@@ -2,6 +2,10 @@ import routeMap from './routeMap';
 
 const navigateTo = ({ router, extras = {}}) => {
     console.log(`${routeMap[router]}?dataObj=${JSON.stringify(extras)}`)
+    if(router === 'Login'){
+        const curPage = getCurrentPages().pop();
+        wx.setStorageSync('rememberRouter', curPage.route);
+    }
     wx.navigateTo({
         url: `${routeMap[router]}?dataObj=${JSON.stringify(extras)}`,
         success: function (res) {

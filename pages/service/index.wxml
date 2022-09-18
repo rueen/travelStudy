@@ -1,6 +1,7 @@
 <!--pages/service/index.wxml-->
 <nav title="数字人问答" isShowLocation="{{false}}" />
 <layout>
+<view class="container">
     <time />
     <robot isShowContent="{{true}}">
         <text>请问有什么可以帮助您的呢?</text>
@@ -17,5 +18,6 @@
             <view wx:for="{{item.answers}}" wx:key="id" bindtap="getFaqInfo" data-item="{{item}}">{{item.title}}</view>
         </robot>
     </block>
+</view>
 </layout>
 

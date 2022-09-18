@@ -14,7 +14,7 @@
     </view>
     <view class="item">
         <view class="icon">
-            <icon prefix="iconColor" name="goods" size="50rpx" />
+            <icon prefix="iconColor" name="goods" size="48rpx" />
         </view>
         <view class="text">好物</view>
     </view>
