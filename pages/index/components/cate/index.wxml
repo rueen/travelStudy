@@ -2,37 +2,37 @@
 <view class="ui-wrap container">
     <view class="item">
         <view class="icon">
-            <icon prefix="icon" name="cate1" size="66rpx" color="#6f5025" />
+            <icon prefix="iconColor" name="study-1" size="60rpx" />
         </view>
         <view class="text">研学</view>
     </view>
     <view class="item">
         <view class="icon">
-            <icon prefix="icon" name="cate2" size="66rpx" color="#6f5025" />
+            <icon prefix="iconColor" name="clockIn-1" size="60rpx" />
         </view>
         <view class="text">打卡</view>
     </view>
     <view class="item">
         <view class="icon">
-            <icon prefix="icon" name="cate3" size="66rpx" color="#6f5025" />
+            <icon prefix="iconColor" name="goods" size="50rpx" />
         </view>
         <view class="text">好物</view>
     </view>
     <view class="item">
         <view class="icon">
-            <icon prefix="icon" name="cate4" size="66rpx" color="#6f5025" />
+            <icon prefix="iconColor" name="maobi-1" size="66rpx" color="#6f5025" />
         </view>
         <view class="text">唐诗宴</view>
     </view>
     <view class="item">
         <view class="icon">
-            <icon prefix="icon" name="cate5" size="66rpx" color="#6f5025" />
+            <icon prefix="iconColor" name="zhusu" size="60rpx"/>
         </view>
         <view class="text">住宿</view>
     </view>
     <view class="item">
         <view class="icon">
-            <icon prefix="icon" name="cate6" size="66rpx" color="#6f5025" />
+            <icon prefix="iconColor" name="car-1" size="66rpx"/>
         </view>
         <view class="text">租车</view>
     </view>

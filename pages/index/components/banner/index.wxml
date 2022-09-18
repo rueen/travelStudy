@@ -1,5 +1,5 @@
 <!--pages/index/components/banner/index.wxml-->
-<view class="ui-wrap ui-boxShadow container">
+<view class="ui-wrap container">
     <swiper
         indicator-dots="{{true}}"
         autoplay="{{false}}"
@@ -10,13 +10,10 @@
         class="swiper"
     >
         <swiper-item class="swiperItem">
-            <image src="../../../../image/test/2.png" class="img" mode="aspectFill" />
+            <image src="../../../../image/test/banner1.png" class="img" mode="aspectFill" />
         </swiper-item>
         <swiper-item>
-            <image src="../../../../image/test/3.png" class="img" mode="aspectFill" />
-        </swiper-item>
-        <swiper-item>
-            <image src="../../../../image/test/1.png" class="img" mode="aspectFill" />
+            <image src="../../../../image/test/banner4.png" class="img" mode="aspectFill" />
         </swiper-item>
     </swiper>
 </view>

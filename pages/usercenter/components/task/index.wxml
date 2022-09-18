@@ -4,7 +4,7 @@
         <text class="title">打卡任务</text>
         <view class="rightWrap">
             <text class="more">查看全部</text>
-            <icon name="chevron-right" size="16" color="#999" />
+            <icon name="arrow-r" size="16" color="#999" />
         </view>
     </view>
     <view class="taskList">

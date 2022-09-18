@@ -36,7 +36,7 @@
     color: #fd9f33;
 }
 .ui-boxShadow{
-    box-shadow: 0rpx 0rpx 10rpx 5rpx rgba(0, 0, 0, .05);
+    box-shadow: 0rpx 0rpx 10rpx 10rpx rgba(0, 0, 0, .03);
 }
 .ui-wrap{
     width: 690rpx;

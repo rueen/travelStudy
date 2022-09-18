@@ -17,7 +17,7 @@
 .icon{
     width: 80rpx;
     height: 80rpx;
-    background-color: #e3d9d1;
+    /* background-color: #e3d9d1; */
     border-radius: 40rpx;
     display: flex;
     justify-content: center;

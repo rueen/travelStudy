@@ -2,15 +2,11 @@
 <view class="ui-wrap container">
     <view class="title">主题项目</view>
     <view class="ui-boxShadow content">
-        <image src="../../../../image/test/2.png" class="img" mode="widthFix" />
-        <view class="desc">研学主题课程-A</view>
+        <image src="../../../../image/test/banner2.png" class="img" mode="widthFix" />
+        <view class="desc">李白诗歌品鉴会</view>
     </view>
     <view class="ui-boxShadow content">
-        <image src="../../../../image/test/1.png" mode="widthFix" class="img" />
-        <view class="desc">研学主题课程-B</view>
-    </view>
-    <view class="ui-boxShadow content">
-        <image src="../../../../image/test/3.png" mode="widthFix" class="img" />
-        <view class="desc">研学主题课程-C</view>
+        <image src="../../../../image/test/banner3.png" mode="widthFix" class="img" />
+        <view class="desc">天姥山读书会</view>
     </view>
 </view>

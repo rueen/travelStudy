@@ -31,7 +31,7 @@
     margin-top: 5rpx;
 }
 .currentItem .text{
-    color: #6b522d;
+    color: #000000;
 }
 .currentItem .iconWrap::after{
     content: '';
@@ -39,7 +39,7 @@
     width: 30rpx;
     height: 30rpx;
     /* background-color: #aee0d5; */
-    background-color: #e3d9d1;
+    background-color: #ecd38d;
     position: absolute;
     z-index: 1;
     border-radius: 15rpx;
