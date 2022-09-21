@@ -22,7 +22,7 @@
             <view class="logo">logo</view>
             <text class="logoText">研学游</text>
         </view>
-        <button class="ui-btn ui-btn-big loginBtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <button class="ui-btn ui-btn-big loginBtn" bindtap="getUserProfile">
             <icon name="logo-wechat" size="52rpx" color="#fff" />
             <text class="loginBtnText">微信账号快捷登录</text>
         </button>

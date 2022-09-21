@@ -36,12 +36,13 @@ Page({
 
     wxLogin() {
         return new Promise((resolve) => {
-            wx.login({
-                success: res => {
-                    console.log(res, '--res')
-                    resolve(res.code);
-                }
-            });
+            
+            // wx.login({
+            //     success: res => {
+            //         console.log(res, '--res')
+            //         resolve(res.code);
+            //     }
+            // });
         })
     },
 
@@ -52,18 +53,32 @@ Page({
         });
 
         if(success){
-            const _code = await this.wxLogin();
-            const { phone } = data;
-            this.login({
-                code: _code,
-                phone,
-                encryptedData,
-                iv
-            })
+            console.log(1)
+            
+            // const _code = await this.wxLogin();
+            // const { phone } = data;
+            // this.handleLogin({
+            //     code: _code,
+            //     phone,
+            //     encryptedData,
+            //     iv
+            // })
         }
     },
 
-    async login(params = {}){
+    getUserProfile(){
+        wx.getUserProfile({
+            desc: '用于完善会员资料',
+            success: (res) => {
+                console.log(res, '--userinfo')
+            },
+            fail: (res) => {
+                console.log(res, '--userinfo1')
+            }
+        })
+    },
+
+    async handleLogin(params = {}){
         const { code, phone, encryptedData, iv } = params;
         const { success, data } = await authServer.wxLogin({
             code, phone, encryptedData, iv
