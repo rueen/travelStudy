@@ -66,7 +66,7 @@ page{
 }
 /* modal */
 .modal-content{
-    padding: 20rpx;
+    padding: 20rpx 30rpx;
 }
 .modal-btnWrap{
     width: 100%;
