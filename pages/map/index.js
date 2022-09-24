@@ -1,18 +1,28 @@
 // pages/map/index.js
+import { commonServer } from '../../server/index';
+import { navigateTo } from '../../utils/navigate';
+
+const app = getApp();
+const safeArea = app.globalData.safeArea || {};
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        height: `${safeArea.height}px`,
+        latitude: 29.496852,
+        longitude: 120.917105,
+        markers: null,
+        curMarkerItem: null
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        
     },
 
     /**
@@ -26,41 +36,57 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        // 获取景点列表
+        this.scenicList();
     },
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
+    async scenicList(){
+        let markers = [];
+        const { success, data } = await commonServer.scenicList();
 
+        if(success){
+            data.forEach((item, index) => {
+                markers.push({
+                    id: item.id - 0,
+                    latitude: item.lat,
+                    longitude: item.lng,
+                    width: 50,
+                    height: 50,
+                    iconPath: '../../image/location.png',
+                    title: item.title,
+                    address: item.address,
+                    camp: item.camp,
+                    task: item.task
+                })
+            })
+            this.setData({
+                markers
+            })
+        }
     },
 
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
+    markertap(e){
+        const { markerId } = e;
+        const { markers } = this.data;
+        const curMarkerItem = markers.filter(item => item.id === markerId)[0];
+        this.setData({
+            curMarkerItem
+        }, () => {
+            this.modal = this.selectComponent("#modal");
+            if(this.modal){
+                this.modal.show();
+            }
+        })
     },
 
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
+    openMore(){
+        const { curMarkerItem } = this.data;
 
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+        navigateTo({
+            router: 'MediaIDetail',
+            extras: {
+                marker: curMarkerItem
+            }
+        })
     }
 })

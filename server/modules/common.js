@@ -20,6 +20,14 @@ const commonServer = {
     // 数字人问答-帮助中心详情
     async faqInfo(data = {}){
         return await request({ url: `/common/faqInfo`, data });
+    },
+    // 获取景点列表
+    async scenicList(data = {}){
+        return await request({ url: `/common/scenicList`, data });
+    },
+    // 获取景区详情
+    async scenicInfo(data = {}){
+        return await request({ url: `/common/scenicInfo`, data });
     }
 }
 

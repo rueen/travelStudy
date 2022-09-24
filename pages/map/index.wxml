@@ -1,4 +1,24 @@
 <!--pages/map/index.wxml-->
 <nav title="地图" />
-<layout></layout>
-
+<map
+    id="myMap"
+    style="width: 100%; height: {{height}};"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    markers="{{markers}}"
+    show-location
+    scale="12"
+    bindmarkertap="markertap"
+>
+</map>
+<modal title="{{curMarkerItem.title}}" height="170px" id="modal">
+    <view class="modal-content">
+        <view>地理位置：{{curMarkerItem.address}}</view>
+        <view>营地名称：{{curMarkerItem.camp}}</view>
+        <view>打卡任务：{{curMarkerItem.task}}</view>
+    </view>
+    <view class="modal-more" bindtap="openMore">
+        <text>了解更多</text>
+        <icon name="arrow-r" size="24rpx" color="#fd9f33" />
+    </view>
+</modal>

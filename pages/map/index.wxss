@@ -1,1 +1,13 @@
 /* pages/map/index.wxss */
+.modal-content{
+    padding: 30rpx 30rpx 0 30rpx;
+    color: #333;
+    font-size: 28rpx;
+    line-height: 46rpx;
+}
+.modal-more{
+    display: flex;
+    align-items: center;
+    padding: 20rpx 30rpx 30rpx 30rpx;
+    color: #fd9f33;
+}

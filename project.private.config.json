@@ -21,6 +21,20 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "地图",
+                    "pathName": "pages/map/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "素材详情",
+                    "pathName": "package/mediaIDetail/index",
+                    "query": "dataObj={\"marker\":{\"id\":2,\"latitude\":\"29.461083\",\"longitude\":\"120.894899\",\"width\":50,\"height\":50,\"iconPath\":\"../../image/location.png\",\"title\":\"七盘仙谷\",\"address\":\"新昌县儒岙镇10公里\",\"camp\":\"唐诗天姥山营地\",\"task\":\"与多利进行唐诗背诵\"}}",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

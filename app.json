@@ -12,17 +12,20 @@
         "pages/index/index": {
             "network": "all",
             "packages": [
-              "otherPackage"
+                "otherPackage"
             ]
         }
     },
-    "subpackages": [{
-        "root": "package",
-        "name": "otherPackage",
-        "pages": [
-            "webViewPage/index"
-        ]
-    }],
+    "subpackages": [
+        {
+            "root": "package",
+            "name": "otherPackage",
+            "pages": [
+                "webViewPage/index",
+                "mediaIDetail/index"
+            ]
+        }
+    ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
