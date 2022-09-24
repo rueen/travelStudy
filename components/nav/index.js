@@ -1,5 +1,6 @@
 // components/nav/index.js
-const { globalData } = getApp();
+const app = getApp();
+const { globalData } = app;
 
 Component({
     /**
@@ -25,6 +26,7 @@ Component({
      * 组件的初始数据
      */
     data: {
+        city: null,
         statusBarHeight: globalData.statusBarHeight,
         navbarHeight: 44 + globalData.statusBarHeight
     },
@@ -43,6 +45,7 @@ Component({
             this.setData({
                 navbarHeight: navbarHeight + globalData.statusBarHeight
             })
+            this.getLocation()
         }
     },
 
@@ -52,6 +55,19 @@ Component({
     methods: {
         goBack(){
             wx.navigateBack();
+        },
+        async getLocation(){
+            const city = wx.getStorageSync('city');
+            if(city){
+                this.setData({
+                    city
+                })
+            } else {
+                await app.getLocation();
+                this.setData({
+                    city: wx.getStorageSync('city')
+                })
+            }
         }
     }
 })

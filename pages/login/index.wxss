@@ -82,14 +82,14 @@ page{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10rpx;
+    margin-bottom: 20rpx;
 }
 .modal-agreementText{
     color: #666;
 }
 .checkbox{
-    width: 28rpx;
-    height: 28rpx;
+    width: 26rpx;
+    height: 26rpx;
     border: 2rpx solid #999;
     border-radius: 6rpx;
     display: flex;

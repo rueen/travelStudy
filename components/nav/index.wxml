@@ -7,7 +7,7 @@
         </block>
         <block wx:if="{{isShowLocation}}">
             <icon prefix="icon" name="location" size="32rpx" color="#fd9f33" />
-            <text class="locationText">杭州</text>
+            <text class="locationText">{{city}}</text>
         </block>
     </view>
     <view class="title">{{title}}</view>

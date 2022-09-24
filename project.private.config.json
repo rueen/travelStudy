@@ -2,7 +2,8 @@
     "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "projectname": "%E7%A0%94%E5%AD%A6%E6%B8%B8",
     "setting": {
-        "compileHotReLoad": true
+        "compileHotReLoad": true,
+        "urlCheck": false
     },
     "libVersion": "2.26.0",
     "condition": {
@@ -33,6 +34,13 @@
                     "name": "素材详情",
                     "pathName": "package/mediaIDetail/index",
                     "query": "dataObj={\"marker\":{\"id\":2,\"latitude\":\"29.461083\",\"longitude\":\"120.894899\",\"width\":50,\"height\":50,\"iconPath\":\"../../image/location.png\",\"title\":\"七盘仙谷\",\"address\":\"新昌县儒岙镇10公里\",\"camp\":\"唐诗天姥山营地\",\"task\":\"与多利进行唐诗背诵\"}}",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "数字人问答",
+                    "pathName": "pages/service/index",
+                    "query": "",
                     "launchMode": "default",
                     "scene": null
                 }

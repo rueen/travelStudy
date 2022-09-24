@@ -31,6 +31,8 @@ Page({
         if(success){
             this.setData({
                 faqCate: data
+            }, () => {
+                this.pageScrollToBottom();
             })
         }
     },
@@ -56,6 +58,8 @@ Page({
             setTimeout(() => {
                 this.setData({
                     qaList: _qaList
+                }, () => {
+                    this.pageScrollToBottom();
                 })
             }, 100)
         });
@@ -91,6 +95,8 @@ Page({
             setTimeout(() => {
                 this.setData({
                     qaList: _qaList
+                }, () => {
+                    this.pageScrollToBottom();
                 })
             }, 100)
         });
@@ -103,5 +109,14 @@ Page({
         if(success){
             return data;
         }
+    },
+
+    pageScrollToBottom(){
+        wx.createSelectorQuery().select('#container').boundingClientRect(function(rect){
+            // 使页面滚动到底部
+            wx.pageScrollTo({
+                scrollTop: rect.bottom
+            })
+        }).exec()
     }
 })
