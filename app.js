@@ -1,6 +1,10 @@
 // app.js
+import PM from '/utils/page.js';
+let pages = new PM();
+
 App({
     onLaunch() {
+        this.pages = pages;
         this.getSystemInfo(this);
     },
     globalData: {

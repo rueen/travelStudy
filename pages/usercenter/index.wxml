@@ -5,9 +5,9 @@
     background="#fcca3b"
 />
 <layout>
-    <head />
-    <task />
-    <serviceBtn />
+    <head id="head" />
+    <task id="task" />
+    <serviceBtn id="serviceBtn" />
 </layout>
 
 

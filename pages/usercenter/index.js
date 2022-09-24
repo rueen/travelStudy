@@ -1,4 +1,6 @@
 // pages/usercenter/index.js
+const app = getApp();
+
 Page({
 
     /**
@@ -12,14 +14,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
+        app.pages.add(this);
     },
 
     /**
@@ -28,19 +23,8 @@ Page({
     onShow() {
         this.getTabBar().init();
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
+    refresh(){
+        this.selectComponent("#head").refresh();
     },
 
     /**

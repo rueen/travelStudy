@@ -1,7 +1,10 @@
 <!--pages/login/components/modal/index.wxml-->
 <view class="container" wx:if="{{isShow}}">
     <view class="bg"></view>
-    <view class="content">
+    <view class="content"
+        style="height: {{height}}; bottom: -{{height}};"
+        animation="{{animation}}"
+    >
         <view class="title" wx:if="{{title}}">{{title}}</view>
         <view class="close" bindtap="close">
             <icon name="close" size="32rpx" color="#999" />

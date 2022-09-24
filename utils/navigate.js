@@ -1,10 +1,35 @@
 import routeMap from './routeMap';
 
+const visitorRouter = ['Login', 'Index', 'Study', 'ClockIn', 'UserCenter', 'WebViewPage']; // 游客可访问
+
+const stopVisitor = (router) => {
+    const token = wx.getStorageSync('token');
+    if(visitorRouter.indexOf(router) < 0 && !token){
+        // 禁止游客访问
+        navigateTo({
+            router: 'Login'
+        });
+        return false;
+    }
+    return true;
+}
+
 const navigateTo = ({ router, extras = {}}) => {
     console.log(`${routeMap[router]}?dataObj=${JSON.stringify(extras)}`)
+    const isPass = stopVisitor(router);
+    if(!isPass){
+        return;
+    }
     if(router === 'Login'){
         const curPage = getCurrentPages().pop();
-        wx.setStorageSync('rememberRouter', curPage.route);
+        const curPageRoute = curPage.route.startsWith('/') ? curPage.route : `/${curPage.route}`;
+        let curRouter = '';
+        Object.values(routeMap).forEach((item, index) => {
+            if(curPageRoute === item){
+                curRouter = Object.keys(routeMap)[index];
+            }
+        })
+        wx.setStorageSync('rememberRouter', curRouter);
     }
     wx.navigateTo({
         url: `${routeMap[router]}?dataObj=${JSON.stringify(extras)}`,
@@ -28,6 +53,10 @@ const navigateTo = ({ router, extras = {}}) => {
 }
   
 const switchTab = (router) => {
+    const isPass = stopVisitor(router);
+    if(!isPass){
+        return;
+    }
     wx.switchTab({
         url: `${routeMap[router]}`
     })

@@ -1,22 +1,6 @@
 <!--pages/login/index.wxml-->
 <view class="container" style="height: {{height}}">
     <nav title="请登录" isShowLocation="{{false}}" />
-    <!-- <view class="loginWrap">
-        <view class="fieldItem">
-            <icon name="mobile" size="40rpx" color="#999" />
-            <input class="weui-input phoneInput" placeholder="请输入手机号"/>
-        </view>
-        <view class="fieldItem">
-            <icon name="code" size="40rpx" color="#999" />
-            <input class="weui-input codeInput" placeholder="请输入验证码"/>
-            <view class="getCodeWrap">
-                <text class="getCode">获取验证码</text>
-            </view>
-        </view>
-        <view class="btnWrap">
-            <button class="ui-btn ui-btn-big btn">登录</button>
-        </view>
-    </view> -->
     <view class="loginWrap">
         <view class="logoWrap">
             <view class="logo">
@@ -25,7 +9,7 @@
             <text class="logoText">研学游</text>
         </view>
         <button class="ui-btn ui-btn-big loginBtn" bindtap="handleLogin">
-            <icon name="logo-wechat" size="52rpx" color="#fff" />
+            <icon name="logo-wechat" size="46rpx" color="#fff" />
             <text class="loginBtnText">微信账号快捷登录</text>
         </button>
     </view>

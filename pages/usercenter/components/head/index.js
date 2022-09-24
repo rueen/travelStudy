@@ -20,6 +20,11 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        refresh(){
+            this.setData({
+                userInfo: wx.getStorageSync('userInfo')
+            })
+        },
         login(){
             navigateTo({
                 router: 'Login'

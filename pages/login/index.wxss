@@ -10,42 +10,6 @@ page{
     justify-content: center;
     align-items: center;
 }
-/* .loginWrap{
-    width: 100%;
-    padding: 60rpx;
-    box-sizing: border-box;
-    margin-bottom: 200rpx;
-}
-.fieldItem{
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    height: 100rpx;
-    border-bottom: 1rpx solid #e3d9d1;
-}
-.btnWrap{
-    padding: 150rpx 30rpx 0;
-}
-.phoneInput{
-    width: 580rpx;
-    height: 60rpx;
-    padding: 2rpx 10rpx;
-    box-sizing: border-box;
-}
-.codeInput{
-    width: 400rpx;
-    height: 60rpx;
-    padding: 2rpx 10rpx;
-    box-sizing: border-box;
-}
-.getCodeWrap{
-    width: 180rpx;
-    text-align: center;
-}
-.getCode{
-    color: #fd9f33;
-} */
 .loginWrap{
     width: 100%;
     box-sizing: border-box;

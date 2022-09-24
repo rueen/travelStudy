@@ -38,9 +38,9 @@ Page({
     },
     
     handleLogin(){
-        const modal = this.selectComponent("#modal");
-        if(modal){
-            modal.show();
+        this.modal = this.selectComponent("#modal");
+        if(this.modal){
+            this.modal.show();
         }
     },
 
@@ -48,11 +48,12 @@ Page({
         const { isAgree } = this.data;
         
         if(!isAgree){
-            this.setData({
-                isAgree: true
-            })
             const { success } = await this.getUserProfile();
-            if(!success){
+            if(success){
+                this.setData({
+                    isAgree: true
+                })
+            } else {
                 this.setData({
                     isAgree: false
                 })
@@ -126,13 +127,16 @@ Page({
                 title: '登录成功',
                 icon: 'success'
             })
+            if(this.modal){
+                this.modal.close();
+            }
             wx.setStorageSync('token', data.token);
             wx.setStorageSync('userInfo', data);
             let rememberRouter = wx.getStorageSync('rememberRouter');
-            // 记忆路由，哪里来哪里去
-            wx.redirectTo({
-                url: `/${rememberRouter}`
-            })
+            console.log(rememberRouter)
+            app.pages.get(rememberRouter) && app.pages.get(rememberRouter).refresh();
+            // 原路返回
+            wx.navigateBack();
             wx.removeStorageSync('rememberRouter');
         }
     },
