@@ -1,6 +1,8 @@
 // pages/login/index.js
-import { commonServer, authServer } from '../../server/index';
+import { commonServer, authServer, memberServer } from '../../server/index';
 import { navigateTo } from '../../utils/navigate';
+import config from '../../config';
+
 const app = getApp();
 const safeArea = app.globalData.safeArea || {};
 
@@ -115,6 +117,18 @@ Page({
         })
     },
 
+    // 获取用户信息
+    async getUserInfo(){
+        const token = wx.getStorageSync('token');
+        const { success } = await memberServer.info({
+            platform: config.platform,
+            authorization: token
+        });
+        if(success){
+
+        }
+    },
+
     async login(){
         const { userInfo, phone } = this.data;
         const { encryptedData, iv } = userInfo;
@@ -131,9 +145,10 @@ Page({
                 this.modal.close();
             }
             wx.setStorageSync('token', data.token);
+            console.log(data, '----data')
+            // this.getUserInfo();
             wx.setStorageSync('userInfo', data);
             let rememberRouter = wx.getStorageSync('rememberRouter');
-            console.log(rememberRouter)
             app.pages.get(rememberRouter) && app.pages.get(rememberRouter).refresh();
             // 原路返回
             wx.navigateBack();

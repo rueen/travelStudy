@@ -31,29 +31,38 @@
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
-        "custom": true,
         "color": "#000000",
         "selectedColor": "#000000",
-        "backgroundColor": "#000000",
+        "backgroundColor": "#fff",
         "list": [
             {
                 "pagePath": "pages/index/index",
+                "iconPath": "./image/tab/home.png",
+                "selectedIconPath": "./image/tab/home-1.png",
                 "text": "首页"
             },
             {
                 "pagePath": "pages/study/index",
+                "iconPath": "./image/tab/study.png",
+                "selectedIconPath": "./image/tab/study-1.png",
                 "text": "研学"
             },
             {
                 "pagePath": "pages/map/index",
+                "iconPath": "./image/tab/map.png",
+                "selectedIconPath": "./image/tab/map-1.png",
                 "text": "地图"
             },
             {
                 "pagePath": "pages/clockIn/index",
+                "iconPath": "./image/tab/clockIn.png",
+                "selectedIconPath": "./image/tab/clockIn-1.png",
                 "text": "打卡"
             },
             {
                 "pagePath": "pages/usercenter/index",
+                "iconPath": "./image/tab/appcenter.png",
+                "selectedIconPath": "./image/tab/appcenter-1.png",
                 "text": "我的"
             }
         ]
