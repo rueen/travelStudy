@@ -2,6 +2,7 @@
     "usingComponents": {
         "nav": "/components/nav/index",
         "layout": "/components/layout/index",
-        "icon": "/components/icon/index"
+        "icon": "/components/icon/index",
+        "modal": "/components/modal/index"
     }
 }

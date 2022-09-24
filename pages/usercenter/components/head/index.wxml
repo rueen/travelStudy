@@ -1,8 +1,9 @@
 <!--pages/usercenter/components/head/index.wxml-->
 <view class="container">
     <view class="avatarBox" bindtap="login">
-        <!-- <image src="https://cdn-we-retail.ym.tencent.com/retail-ui/components-exp/avatar/avatar-v2/1.png" mode="aspectFill" class="avatar"></image> -->
-        <icon prefix="icon" name="user" size="44rpx" color="#bebebe" />
+        <image wx:if="{{userInfo && userInfo.avatar}}" src="{{userInfo.avatar}}" mode="aspectFill" class="avatar"></image>
+        <icon wx:else prefix="icon" name="user" size="44rpx" color="#bebebe" />
     </view>
-    <text class="userName" bindtap="login">请登录</text>
+    <text wx:if="{{userInfo && userInfo.nickName}}" class="userName" bindtap="login">{{userInfo.nickName}}</text>
+    <text wx:else class="userName" bindtap="login">请登录</text>
 </view>

@@ -11,6 +11,13 @@ text{
 button{
     font-size: 24rpx;
 }
+button[disabled]{
+    background-color: #e4e4e4!important;
+}
 input{
     font-size: 24rpx;
+}
+checkbox{
+    transform: scale(.6);
+    transform-origin: center;
 }
