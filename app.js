@@ -32,6 +32,7 @@ App({
         })
     },
     getLocation: function(){
+        console.log(3)
         return new Promise(resolve => {
             wx.getFuzzyLocation({
                 type: 'wgs84',

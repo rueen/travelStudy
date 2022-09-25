@@ -5,7 +5,7 @@
         <block wx:if="{{isGoBack}}">
             <icon name="arrow-l" size="40rpx" color="#333" bindtap="goBack" />
         </block>
-        <block wx:if="{{isShowLocation}}">
+        <block wx:if="{{isShowLocation && city}}">
             <icon prefix="icon" name="location" size="32rpx" color="#fd9f33" />
             <text class="locationText">{{city}}</text>
         </block>

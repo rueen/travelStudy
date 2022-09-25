@@ -1,10 +1,11 @@
 @font-face {
     font-family: 'iconColor';  /* Project id 3639251 */
     src: 
-         url('//at.alicdn.com/t/c/font_3639251_v5ppzjcb1is.woff2?t=1664023649116') format('woff2'),
-         url('//at.alicdn.com/t/c/font_3639251_v5ppzjcb1is.woff?t=1664023649116') format('woff'),
-         url('//at.alicdn.com/t/c/font_3639251_v5ppzjcb1is.ttf?t=1664023649116') format('truetype');
+         url('//at.alicdn.com/t/c/font_3639251_csaep6xekvi.woff2?t=1664025767947') format('woff2'),
+         url('//at.alicdn.com/t/c/font_3639251_csaep6xekvi.woff?t=1664025767947') format('woff'),
+         url('//at.alicdn.com/t/c/font_3639251_csaep6xekvi.ttf?t=1664025767947') format('truetype');
   }
+  
   .iconColor {
     font-family: "iconColor" !important;
     font-size: 32rpx;

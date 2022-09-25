@@ -27,7 +27,6 @@
     height: 30rpx;
     padding: 6rpx;
     box-sizing: border-box;
-    margin-left: 15rpx;
 }
 .animationItem{
     width: 20rpx;

@@ -132,9 +132,11 @@ Page({
     async login(){
         const { userInfo, phone } = this.data;
         const { encryptedData, iv } = userInfo;
+        const _userInfo = userInfo.userInfo || {};
+        const { avatarUrl, gender, nickName } = _userInfo;
         const code = await this.wxLogin();
         const { success, data } = await authServer.wxLogin({
-            code, phone, encryptedData, iv
+            code, phone, encryptedData, iv, avatarUrl, gender, nickName
         });
         if(success){
             wx.showToast({

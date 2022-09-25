@@ -14,7 +14,8 @@ Page({
             1: 'zixun1',
             2: 'zixun2',
             3: 'feedback'
-        }
+        },
+        delay: 500
     },
 
     /**
@@ -61,13 +62,14 @@ Page({
                     item.answers = answers;
                 }
             })
+            this.pageScrollToBottom();
             setTimeout(() => {
                 this.setData({
                     qaList: _qaList
                 }, () => {
                     this.pageScrollToBottom();
                 })
-            }, 100)
+            }, this.data.delay)
         });
     },
 
@@ -94,17 +96,18 @@ Page({
             _qaList.forEach(async item => {
                 const questions = item.questions;
                 if(questions && !item.answers){
-                    const answers = await this.faqInfo(item.id);
+                    const answers = await this.faqInfo(item.questions.id);
                     item.answers = answers;
                 }
             })
+            this.pageScrollToBottom();
             setTimeout(() => {
                 this.setData({
                     qaList: _qaList
                 }, () => {
                     this.pageScrollToBottom();
                 })
-            }, 100)
+            }, this.data.delay)
         });
     },
 
@@ -113,7 +116,7 @@ Page({
             id
         });
         if(success){
-            return data;
+            return [data];
         }
     },
 
@@ -121,7 +124,7 @@ Page({
         wx.createSelectorQuery().select('#container').boundingClientRect(function(rect){
             // 使页面滚动到底部
             wx.pageScrollTo({
-                scrollTop: rect.bottom
+                scrollTop: rect.height
             })
         }).exec()
     }

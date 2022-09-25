@@ -3,7 +3,7 @@
     "projectname": "%E7%A0%94%E5%AD%A6%E6%B8%B8",
     "setting": {
         "compileHotReLoad": true,
-        "urlCheck": false
+        "urlCheck": true
     },
     "libVersion": "2.26.0",
     "condition": {

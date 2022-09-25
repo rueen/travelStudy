@@ -57,12 +57,14 @@ Component({
             wx.navigateBack();
         },
         async getLocation(){
+            console.log(1)
             const city = wx.getStorageSync('city');
             if(city){
                 this.setData({
                     city
                 })
             } else {
+                console.log(2)
                 await app.getLocation();
                 this.setData({
                     city: wx.getStorageSync('city')
