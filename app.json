@@ -22,7 +22,7 @@
             "name": "otherPackage",
             "pages": [
                 "webViewPage/index",
-                "mediaIDetail/index"
+                "markerDetail/index"
             ]
         }
     ],

@@ -1,2 +1,0 @@
-<!--pages/mediaIDetail/index.wxml-->
-<nav title="{{title}}" isShowLocation="{{false}}" />

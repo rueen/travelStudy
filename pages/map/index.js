@@ -83,7 +83,7 @@ Page({
         const { curMarkerItem } = this.data;
 
         navigateTo({
-            router: 'MediaIDetail',
+            router: 'MarkerDetail',
             extras: {
                 marker: curMarkerItem
             }

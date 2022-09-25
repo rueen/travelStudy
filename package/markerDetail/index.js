@@ -1,5 +1,7 @@
-// pages/mediaIDetail/index.js
+// pages/markerDetail/index.js
 import { commonServer } from '../../server/index';
+const app = getApp();
+const { globalData } = app;
 
 Page({
 
@@ -7,9 +9,11 @@ Page({
      * 页面的初始数据
      */
     data: {
+        height: `${globalData.contentHeight}px`,
         title: '详情',
         marker: {},
-        mediaId: null
+        mediaId: null,
+        media: null // 素材
     },
 
     /**
@@ -35,7 +39,7 @@ Page({
         });
         if(success){
             this.setData({
-                mediaId: data.mediaId
+                media: data.media || {}
             })
         }
     },

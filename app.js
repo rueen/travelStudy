@@ -18,7 +18,9 @@ App({
         userInfo: null,
         screenHeight: null,
         safeArea: {},
-        statusBarHeight: 20 // 状态栏高度
+        statusBarHeight: 20, // 状态栏高度
+        navbarHeight: null, // 导航栏高度
+        contentHeight: null, // 内容高度
     },
     getSystemInfo: function(_this){
         wx.getSystemInfo({
@@ -28,6 +30,9 @@ App({
                 _this.globalData.screenHeight = res.screenHeight;
                 _this.globalData.safeArea = res.safeArea;
                 _this.globalData.statusBarHeight = res.statusBarHeight;
+                const navbarHeight = 44 + res.statusBarHeight;
+                _this.navbarHeight = navbarHeight;
+                _this.globalData.contentHeight = res.safeArea.height - 44;
             }
         })
     },

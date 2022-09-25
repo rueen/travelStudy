@@ -13,7 +13,7 @@
   max-width: 488rpx;
   background-color: #fff;
   border-radius: 0 20rpx 20rpx 20rpx;
-  padding: 22rpx 30rpx;
+  padding: 20rpx 30rpx;
   margin-left: 20rpx;
   font-size: 26rpx;
   color: #000;

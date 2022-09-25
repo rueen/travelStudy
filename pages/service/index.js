@@ -59,6 +59,7 @@ Page({
                 const questions = item.questions;
                 if(questions && !item.answers){
                     const answers = await this.faqList(questions.id);
+                    item.disabled = false;
                     item.answers = answers;
                 }
             })
@@ -83,9 +84,12 @@ Page({
     },
 
     async getFaqInfo(e){
-        const { currentTarget: { dataset: { item} } } = e;
+        const { currentTarget: { dataset: { item, answer } } } = e;
+        if(item.disabled){
+            return false;
+        }
         const qaList = JSON.parse(JSON.stringify(this.data.qaList));
-        const questions = item;
+        const questions = answer;
         qaList.push({
             questions
         });
@@ -93,11 +97,12 @@ Page({
             qaList
         },() => {
             const _qaList = JSON.parse(JSON.stringify(this.data.qaList));
-            _qaList.forEach(async item => {
-                const questions = item.questions;
-                if(questions && !item.answers){
-                    const answers = await this.faqInfo(item.questions.id);
-                    item.answers = answers;
+            _qaList.forEach(async _item => {
+                const questions = _item.questions;
+                if(questions && !_item.answers){
+                    const answers = await this.faqInfo(_item.questions.id);
+                    _item.disabled = true;
+                    _item.answers = answers;
                 }
             })
             this.pageScrollToBottom();

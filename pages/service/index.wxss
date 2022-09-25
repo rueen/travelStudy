@@ -7,3 +7,11 @@
 .empty-seat{
     height: 50rpx;
 }
+.itemImg{
+    width: 428rpx;
+    margin-top: 10rpx;
+}
+.itemVideo{
+    width: 428rpx;
+    margin-top: 10rpx;
+}

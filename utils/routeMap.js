@@ -7,7 +7,7 @@ const routeMap = {
     UserCenter: '/pages/usercenter/index',
     Service: '/pages/service/index',
     WebViewPage: '/package/webViewPage/index',
-    MediaIDetail: '/package/mediaIDetail/index'
+    MarkerDetail: '/package/markerDetail/index'
 }
 
 export default routeMap;

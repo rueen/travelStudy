@@ -28,7 +28,7 @@ Component({
     data: {
         city: null,
         statusBarHeight: globalData.statusBarHeight,
-        navbarHeight: 44 + globalData.statusBarHeight
+        navbarHeight: globalData.navbarHeight
     },
     
     lifetimes: {
