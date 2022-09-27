@@ -32,7 +32,7 @@
     background: none;
 }
 .ui-btn.ui-btn-ghost.ui-btn-red{
-    border: 1rpx solid #fd9f33;
+    border: 2rpx solid #fd9f33;
     color: #fd9f33;
 }
 .ui-boxShadow{
