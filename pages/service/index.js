@@ -10,11 +10,6 @@ Page({
         index: 0,
         faqCate: [], // 问题分类
         qaList: [], // 问答列表
-        icons: {
-            1: 'zixun1',
-            2: 'zixun2',
-            3: 'feedback'
-        },
         delay: 500
     },
 
@@ -35,9 +30,6 @@ Page({
     async faqCate(){
         const { success, data } = await commonServer.faqCate();
         if(success){
-            data.forEach(item => {
-                item.icon = this.data.icons[item.id]
-            })
             this.setData({
                 faqCate: data
             })
@@ -132,5 +124,10 @@ Page({
                 scrollTop: rect.height
             })
         }).exec()
+    },
+
+    // 继续追问
+    continue(){
+
     }
 })

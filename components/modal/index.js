@@ -49,6 +49,7 @@ Component({
             this.setData({
                 animation: this.animation.export()
             })
+            this.triggerEvent('onClose');
             setTimeout(() => {
                 this.setData({
                     isShow: false

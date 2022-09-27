@@ -11,14 +11,34 @@
     bindmarkertap="markertap"
 >
 </map>
-<modal title="{{curMarkerItem.title}}" height="170px" id="modal">
+<modal
+    title="{{curMarkerItem.title}}"
+    height="800rpx"
+    id="modal"
+    bind:onClose="modalOnClose"
+>
     <view class="modal-content">
         <view>地理位置：{{curMarkerItem.address}}</view>
         <view>营地名称：{{curMarkerItem.camp}}</view>
         <view>打卡任务：{{curMarkerItem.task}}</view>
-    </view>
-    <view class="modal-more" bindtap="openMore">
-        <text>了解更多</text>
-        <icon name="arrow-r" size="24rpx" color="#fd9f33" />
+        <view class="mediaWrap" wx:if="{{curMarkerItem.media}}">
+            <view wx:if="{{curMarkerItem.media.materialType === 1}}">
+                <image src="{{curMarkerItem.media.content}}" mode="aspectFit" class="mediaImg"></image>
+            </view>
+            <view wx:if="{{curMarkerItem.media.materialType === 2}}">
+                <video
+                    src="{{curMarkerItem.media.content}}"
+                    autoplay
+                    auto-pause-if-navigate
+                    auto-pause-if-open-native
+                    object-fit="contain"
+                    class="mediaVideo"
+                    id="mediaVideo"
+                ></video>
+            </view>
+            <view wx:if="{{curMarkerItem.media.materialType === 3}}">
+                <rich-text nodes="{{curMarkerItem.media.content}}"></rich-text>
+            </view>
+        </view>
     </view>
 </modal>

@@ -15,3 +15,7 @@
     width: 428rpx;
     margin-top: 10rpx;
 }
+.continue{
+    color: #fd9f33;
+    margin-top: 10rpx;
+}

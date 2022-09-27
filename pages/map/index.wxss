@@ -4,10 +4,20 @@
     color: #333;
     font-size: 28rpx;
     line-height: 46rpx;
+    height: 700rpx;
+    overflow-y: scroll;
+    box-sizing: border-box;
 }
-.modal-more{
+.mediaWrap{
     display: flex;
-    align-items: center;
-    padding: 20rpx 30rpx 30rpx 30rpx;
-    color: #fd9f33;
+    justify-content: center;
+    margin-top: 20rpx;
+}
+.mediaImg{
+    width: 500rpx;
+    height: 500rpx;
+}
+.mediaVideo{
+    width: 500rpx;
+    height: 500rpx;
 }

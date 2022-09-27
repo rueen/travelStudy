@@ -35,6 +35,7 @@
                 <view wx:if="{{answer.media.materialType === 3}}">
                     <rich-text nodes="{{answer.media.content}}"></rich-text>
                 </view>
+                <view class="continue" wx:if="{{item.disabled}}" bindtap="continue">继续追问</view>
             </robot>
         </block>
         <view class="empty-seat"></view>

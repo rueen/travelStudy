@@ -21,8 +21,7 @@
             "root": "package",
             "name": "otherPackage",
             "pages": [
-                "webViewPage/index",
-                "markerDetail/index"
+                "webViewPage/index"
             ]
         }
     ],

@@ -1,6 +1,6 @@
 <!--pages/usercenter/components/head/index.wxml-->
 <view class="container">
-    <view class="avatarBox" bindtap="login">
+    <view class="avatarBox">
         <image wx:if="{{userInfo && userInfo.avatar}}" src="{{userInfo.avatar}}" mode="aspectFill" class="avatar"></image>
         <icon wx:else prefix="icon" name="user" size="44rpx" color="#bebebe" />
     </view>

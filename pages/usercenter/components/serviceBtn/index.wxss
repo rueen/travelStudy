@@ -16,7 +16,6 @@
     padding-left: 10rpx;
     box-sizing: border-box;
     background-color: #fd9f33;
-    /* background: -webkit-linear-gradient(left,#fff2e8,#fff7f1,#fce7d5); */
 }
 .serviceHead{
     width: 60rpx;
@@ -27,12 +26,6 @@
     font-weight: bold;
     font-size: 26rpx;
     margin-left: 20rpx;
-    color: #fff;
-}
-.serviceText2{
-    font-size: 22rpx;
-    color: #555;
-    margin-left: 10rpx;
     color: #fff;
 }
 .left{

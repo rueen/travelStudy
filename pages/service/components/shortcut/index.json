@@ -1,6 +1,4 @@
 {
     "component": true,
-    "usingComponents": {
-      "icon": "/components/icon/index"
-    }
+    "usingComponents": {}
 }

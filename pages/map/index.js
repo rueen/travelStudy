@@ -65,10 +65,12 @@ Page({
         }
     },
 
-    markertap(e){
+    async markertap(e){
         const { markerId } = e;
         const { markers } = this.data;
         const curMarkerItem = markers.filter(item => item.id === markerId)[0];
+        const media = await this.scenicInfo(curMarkerItem);
+        curMarkerItem.media = media;
         this.setData({
             curMarkerItem
         }, () => {
@@ -79,14 +81,13 @@ Page({
         })
     },
 
-    openMore(){
-        const { curMarkerItem } = this.data;
-
-        navigateTo({
-            router: 'MarkerDetail',
-            extras: {
-                marker: curMarkerItem
-            }
-        })
+    async scenicInfo(marker){
+        const { success, data } = await commonServer.scenicInfo({
+            id: marker.id
+        });
+        if(success){
+            return data.media;
+        }
+        return null;
     }
 })
