@@ -9,8 +9,11 @@ Page({
     data: {
         index: 0,
         faqCate: [], // 问题分类
-        qaList: [], // 问答列表
-        delay: 500
+        qaList: [{
+            type: 'init'
+        }], // 问答列表
+        delay: 500,
+        isShowContinueBtn: false // 是否显示追问按钮
     },
 
     /**
@@ -41,7 +44,8 @@ Page({
         const qaList = JSON.parse(JSON.stringify(this.data.qaList));
         const questions = item;
         qaList.push({
-            questions
+            questions,
+            type: 'qa'
         });
         this.setData({
             qaList
@@ -58,7 +62,8 @@ Page({
             this.pageScrollToBottom();
             setTimeout(() => {
                 this.setData({
-                    qaList: _qaList
+                    qaList: _qaList,
+                    isShowContinueBtn: true
                 }, () => {
                     this.pageScrollToBottom();
                 })
@@ -83,7 +88,8 @@ Page({
         const qaList = JSON.parse(JSON.stringify(this.data.qaList));
         const questions = answer;
         qaList.push({
-            questions
+            questions,
+            type: 'qa'
         });
         this.setData({
             qaList
@@ -105,6 +111,7 @@ Page({
                     this.pageScrollToBottom();
                 })
             }, this.data.delay)
+            // console.log(_qaList, '_qaList')
         });
     },
 
@@ -117,6 +124,20 @@ Page({
         }
     },
 
+    // 继续追问
+    continue(){
+        const qaList = JSON.parse(JSON.stringify(this.data.qaList));
+        qaList.push({
+            type: 'init'
+        })
+        this.setData({
+            qaList,
+            isShowContinueBtn: false
+        })
+        
+        this.pageScrollToBottom();
+    },
+
     pageScrollToBottom(){
         wx.createSelectorQuery().select('#container').boundingClientRect(function(rect){
             // 使页面滚动到底部
@@ -125,9 +146,4 @@ Page({
             })
         }).exec()
     },
-
-    // 继续追问
-    continue(){
-
-    }
 })

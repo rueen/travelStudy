@@ -7,6 +7,10 @@ Component({
         isShowContent: {
             type: Boolean,
             value: false
+        },
+        isInit: {
+            type: Boolean,
+            value: false
         }
     },
 
@@ -14,12 +18,18 @@ Component({
      * 组件的初始数据
      */
     data: {
-
+        delay: 400,
     },
 
     lifetimes: {
         attached(){
-            
+            if(this.data.isInit){
+                setTimeout(() => {
+                    this.setData({
+                        isShowContent: true
+                    })
+                }, this.data.delay);
+            }
         }
     },
 

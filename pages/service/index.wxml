@@ -3,40 +3,46 @@
 <layout>
     <view class="container" id="container">
         <time />
-        <robot isShowContent="{{true}}">
-            <text>请问有什么可以帮助您的呢?</text>
-        </robot>
-        <shortcut
-            list="{{faqCate}}"
-            bind:bindtapItem="bindtapItem"
-        />
         <block wx:for="{{qaList}}" wx:key="index">
-            <customer>
-                <view>{{item.questions.title}}</view>
-            </customer>
-            <robot isShowContent="{{item.answers}}">
-                <view wx:for="{{item.answers}}" wx:key="id" wx:for-item="answer" bindtap="getFaqInfo" data-item="{{item}}" data-answer="{{answer}}">
-                    <view>{{answer.title}}</view>
-                    <view class="media" wx:if="{{answer.media && answer.media.materialType != null}}">
-                        <view wx:if="{{answer.media.materialType === 1}}">
-                            <image src="{{answer.media.content}}" mode="widthFix" class="itemImg"></image>
-                        </view>
-                        <view class="mediaVideo" wx:if="{{answer.media.materialType === 2}}">
-                            <video
-                                src="{{answer.media.content}}"
-                                auto-pause-if-navigate
-                                auto-pause-if-open-native
-                                object-fit="contain"
-                                class="itemVideo"
-                            ></video>
+            <block wx:if="{{item.type === 'init'}}">
+                <robot isInit="{{true}}">
+                    <text>请问有什么可以帮助您的呢?</text>
+                </robot>
+                <shortcut
+                    list="{{faqCate}}"
+                    bind:bindtapItem="bindtapItem"
+                />
+            </block>
+            <block wx:if="{{item.type === 'qa'}}">
+                <customer>
+                    <view>{{item.questions.title}}</view>
+                </customer>
+                <robot isShowContent="{{item.answers}}">
+                    <view wx:for="{{item.answers}}" wx:key="id" wx:for-item="answer" bindtap="getFaqInfo" data-item="{{item}}" data-answer="{{answer}}">
+                        <view>{{answer.title}}</view>
+                        <view class="media" wx:if="{{answer.media && answer.media.materialType != null}}">
+                            <view wx:if="{{answer.media.materialType === 1}}">
+                                <image src="{{answer.media.content}}" mode="widthFix" class="itemImg"></image>
+                            </view>
+                            <view class="mediaVideo" wx:if="{{answer.media.materialType === 2}}">
+                                <video
+                                    src="{{answer.media.content}}"
+                                    auto-pause-if-navigate
+                                    auto-pause-if-open-native
+                                    object-fit="contain"
+                                    class="itemVideo"
+                                ></video>
+                            </view>
                         </view>
                     </view>
+                    <view wx:if="{{answer.media.materialType === 3}}">
+                        <rich-text nodes="{{answer.media.content}}"></rich-text>
+                    </view>
+                </robot>
+                <view class="continue" wx:if="{{item.disabled && index === (qaList.length - 1) && isShowContinueBtn}}" bindtap="continue">
+                    <button class="ui-btn ui-btn-red ui-btn-ghost">继续追问</button>
                 </view>
-                <view wx:if="{{answer.media.materialType === 3}}">
-                    <rich-text nodes="{{answer.media.content}}"></rich-text>
-                </view>
-                <view class="continue" wx:if="{{item.disabled}}" bindtap="continue">继续追问</view>
-            </robot>
+            </block>
         </block>
         <view class="empty-seat"></view>
     </view>

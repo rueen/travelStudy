@@ -1,7 +1,7 @@
 <!--pages/service/components/shortcut/index.wxml-->
 <scroll-view scroll-x="true">
-    <view class="container" style="width: {{180*5 + 'rpx'}};">
-        <view class="item" wx:for="{{list}}" wx:key="id" bindtap="bindtapItem" data-item="{{item}}">
+    <view class="container" style="width: {{180*list.length + 'rpx'}};">
+        <view class="item moveLeft{{index + 1}}" wx:for="{{list}}" wx:key="id" bindtap="bindtapItem" data-item="{{item}}">
             <image src="{{item.photo}}" mode="aspectFit" class="icon"></image>
             <text class="itemText">{{item.title}}</text>
         </view>

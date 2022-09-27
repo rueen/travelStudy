@@ -15,6 +15,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .itemText{
   color: #333;
@@ -24,4 +25,64 @@
 .icon{
     width: 60rpx;
     height: 60rpx;
+}
+.moveLeft1{
+    animation: moveLeft1 0.3s;
+    animation-fill-mode: forwards;
+}
+.moveLeft2{
+    animation: moveLeft2 0.4s;
+    animation-fill-mode: forwards;
+}
+.moveLeft3{
+    animation: moveLeft3 0.5s;
+    animation-fill-mode: forwards;
+}
+.moveLeft4{
+    animation: moveLeft4 0.6s;
+    animation-fill-mode: forwards;
+}
+.moveLeft5{
+    animation: moveLeft5 0.7s;
+    animation-fill-mode: forwards;
+}
+@keyframes moveLeft1{
+    0%{
+        left: 200rpx;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes moveLeft2{
+    0%{
+        left: 300rpx;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes moveLeft3{
+    0%{
+        left: 400rpx;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes moveLeft4{
+    0%{
+        left: 500rpx;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes moveLeft5{
+    0%{
+        left: 600rpx;
+    }
+    100%{
+        left: 0;
+    }
 }

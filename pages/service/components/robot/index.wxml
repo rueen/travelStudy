@@ -7,6 +7,6 @@
             <view class="animationItem move2"></view>
             <view class="animationItem move3"></view>
         </view>
-        <slot></slot>
+        <slot wx:if="{{isShowContent}}"></slot>
     </view>
 </view>
