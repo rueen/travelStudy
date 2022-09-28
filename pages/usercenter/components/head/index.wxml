@@ -2,7 +2,7 @@
 <view class="container">
     <view class="avatarBox">
         <image wx:if="{{userInfo && userInfo.avatar}}" src="{{userInfo.avatar}}" mode="aspectFill" class="avatar"></image>
-        <icon wx:else prefix="icon" name="user" size="44rpx" color="#bebebe" />
+        <icon wx:else prefix="icon" name="user" size="44rpx" color="#bebebe" bindtap="login" />
     </view>
     <text wx:if="{{userInfo && userInfo.nickName}}" class="userName">{{userInfo.nickName}}</text>
     <text wx:else class="userName" bindtap="login">请登录</text>
