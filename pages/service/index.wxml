@@ -20,6 +20,7 @@
                 <robot isShowContent="{{item.answers}}">
                     <view wx:for="{{item.answers}}" wx:key="id" wx:for-item="answer" bindtap="getFaqInfo" data-item="{{item}}" data-answer="{{answer}}">
                         <view>{{answer.title}}</view>
+                        <rich-text nodes="{{answer.content}}"></rich-text>
                         <view class="media" wx:if="{{answer.media && answer.media.materialType != null}}">
                             <view wx:if="{{answer.media.materialType === 1}}">
                                 <image src="{{answer.media.content}}" mode="widthFix" class="itemImg"></image>
