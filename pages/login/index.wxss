@@ -67,6 +67,14 @@ page{
 /* modal */
 .modal-content{
     padding: 20rpx 30rpx;
+    height: 500rpx;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-sizing: border-box;
+}
+.richText{
+    height: 100%;
+    overflow-y: scroll;
 }
 .modal-btnWrap{
     width: 100%;

@@ -15,14 +15,15 @@ Page({
         height: `${safeArea.height}px`,
         isAgree: false,
         userInfo: null, // 存储微信用户信息
-        phone: null // 存储用户手机号
+        phone: null, // 存储用户手机号
+        protocolContent: '' // 注册协议内容
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        
+        this.getProtocol()
     },
 
     /**
@@ -160,30 +161,24 @@ Page({
 
     // 打开注册协议
     async openProtocolPage(){
-        const { success, data } = await commonServer.protocol();
-
-        if(success){
-            navigateTo({
-                router: 'WebViewPage',
-                extras: {
-                    title: '注册协议',
-                    content: data.content
-                }
-            })
-        }
+        navigateTo({
+            router: 'Protocol'
+        })
     },
     // 打开隐私政策页面
     async openPolicyPage(){
-        const { success, data } = await commonServer.policy();
+        navigateTo({
+            router: 'Policy'
+        })
+    },
+    // 获取注册协议
+    async getProtocol(){
+        const { success, data } = await commonServer.protocol();
 
-        if(success){
-            navigateTo({
-                router: 'WebViewPage',
-                extras: {
-                    title: '隐私政策',
-                    content: data.content
-                }
-            })
+        if(success && data){
+            this.setData({
+                protocolContent: data.content
+            })  
         }
     }
 })

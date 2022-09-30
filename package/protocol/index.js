@@ -1,25 +1,25 @@
-// package/webViewPage/index.js
+// package/protocol/index.js
+import { commonServer } from '../../server/index';
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        title: '',
+        title: '注册协议',
         content: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad(options = {}) {
-        if (options.dataObj) {
-            const dataObj = JSON.parse(options.dataObj);
-            const { title, content } = dataObj;
+    async onLoad(options) {
+        const { success, data } = await commonServer.protocol();
+
+        if(success && data){
             this.setData({
-                title,
-                content
-            })
+                content: data.content
+            })  
         }
     },
 

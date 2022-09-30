@@ -1,0 +1,5 @@
+/* package/protocol/index.wxss */
+.container{
+    background-color: #fff;
+    padding: 30rpx;
+}

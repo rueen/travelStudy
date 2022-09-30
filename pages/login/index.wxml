@@ -19,9 +19,11 @@
     <text class="and">和</text>
     <text bindtap="openPolicyPage">《隐私政策》</text>
 </view>
-<modal title="注册协议" id="modal">
+<modal title="注册协议" id="modal" height="800rpx">
     <view class="modal-content">
-        <text>此处填写注册协议或者注册须知</text>
+        <view class="richText">
+            <rich-text nodes="{{protocolContent}}"></rich-text>
+        </view>
     </view>
     <view class="modal-btnWrap">
         <view class="modal-agreementWrap" bindtap="checkboxChange">

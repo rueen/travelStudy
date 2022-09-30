@@ -1,4 +1,4 @@
-<!--package/webViewPage/index.wxml-->
+<!--package/protocol/index.wxml-->
 <nav title="{{title}}" isShowLocation="{{false}}" />
 <layout>
     <view class="container">

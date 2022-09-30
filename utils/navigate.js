@@ -1,6 +1,6 @@
 import routeMap from './routeMap';
 
-const visitorRouter = ['Login', 'Index', 'Study', 'ClockIn', 'UserCenter', 'WebViewPage']; // 游客可访问
+const visitorRouter = ['Login', 'Index', 'Study', 'ClockIn', 'UserCenter', 'Protocol', 'Policy']; // 游客可访问
 
 const stopVisitor = (router) => {
     const token = wx.getStorageSync('token');

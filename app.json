@@ -21,7 +21,8 @@
             "root": "package",
             "name": "otherPackage",
             "pages": [
-                "webViewPage/index"
+                "protocol/index",
+                "policy/index"
             ]
         }
     ],

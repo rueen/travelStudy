@@ -6,7 +6,8 @@ const routeMap = {
     ClockIn: '/pages/clockIn/index',
     UserCenter: '/pages/usercenter/index',
     Service: '/pages/service/index',
-    WebViewPage: '/package/webViewPage/index'
+    Protocol: '/package/protocol/index',
+    Policy: '/package/policy/index'
 }
 
 export default routeMap;

@@ -1,0 +1,7 @@
+<!--package/policy/index.wxml-->
+<nav title="{{title}}" isShowLocation="{{false}}" />
+<layout>
+    <view class="container">
+        <rich-text nodes="{{content}}"></rich-text>
+    </view>
+</layout>
