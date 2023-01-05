@@ -1,11 +1,11 @@
-const ENV = 'TEST';
+const ENV = 'PROD';
 
 const base = {
     platform: 50
 }
 const config = {
     PROD: {
-        baseURL: '',
+        baseURL: 'https://service.unidt.com/dolly-biz/studytour-api/index.php',
         ...base
     },
     TEST: {
