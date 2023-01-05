@@ -52,7 +52,7 @@ var Utils = {
      * 使用微信接口进行定位
      */
     getWXLocation(success, fail, complete) {
-        wx.getLocation({
+        wx.getFuzzyLocation({
             type: 'gcj02',
             success: success,
             fail: fail,
