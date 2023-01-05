@@ -45,10 +45,22 @@
                 "text": "首页"
             },
             {
+                "pagePath": "pages/study/index",
+                "iconPath": "./image/tab/study.png",
+                "selectedIconPath": "./image/tab/study-1.png",
+                "text": "研学"
+            },
+            {
                 "pagePath": "pages/map/index",
                 "iconPath": "./image/tab/map.png",
                 "selectedIconPath": "./image/tab/map-1.png",
                 "text": "地图"
+            },
+            {
+                "pagePath": "pages/clockIn/index",
+                "iconPath": "./image/tab/clockIn.png",
+                "selectedIconPath": "./image/tab/clockIn-1.png",
+                "text": "打卡"
             },
             {
                 "pagePath": "pages/usercenter/index",

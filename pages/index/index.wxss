@@ -1,6 +1,6 @@
 /* pages/index/index.wxss */
 page {
     box-sizing: border-box;
-    padding-bottom: calc(env(safe-area-inset-bottom) + 96rpx);
+    padding-bottom: 50rpx;
     background-color: #fff;
 }
