@@ -27,6 +27,7 @@
 .img{
     width: 295rpx;
     height: 320rpx;
+    background-color: #eee;
 }
 .price{
     font-weight: bold;

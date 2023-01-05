@@ -3,9 +3,10 @@
     <view class="title">推荐商品</view>
     <view class="content">
         <view class="item ui-boxShadow" wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key="index">
-            <image src="https://gw.alicdn.com/imgextra/i1/416222484/TB1kOmGLVXXXXXuapXXXXXXXXXX_!!0-item_pic.jpg_Q75.jpg_.webp" mode="aspectFit" class="img"></image>
-            <view class="price">¥99.99</view>
-            <view class="clamp2 goodsTitle">美得让人窒息的唐诗宋词诗经3册 许渊冲经典英译（六神磊磊）文学散文随笔诗歌诗词 美得窒息的唐诗宋词诗经</view>
+            <!-- <image src="https://gw.alicdn.com/imgextra/i1/416222484/TB1kOmGLVXXXXXuapXXXXXXXXXX_!!0-item_pic.jpg_Q75.jpg_.webp" mode="aspectFit" class="img"></image> -->
+            <view class="img"></view>
+            <view class="price">¥--.--</view>
+            <view class="clamp2 goodsTitle">敬请期待...</view>
         </view>
     </view>
 </view>
