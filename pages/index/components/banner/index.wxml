@@ -9,10 +9,10 @@
         indicator-active-color="#6f5025"
         class="swiper"
     >
-        <swiper-item class="swiperItem">
+        <swiper-item class="swiperItem" bindtap="openMapPage">
             <image src="../../../../image/test/banner1.png" class="img" mode="aspectFill" />
         </swiper-item>
-        <swiper-item>
+        <swiper-item bindtap="openMapPage">
             <image src="../../../../image/test/banner4.png" class="img" mode="aspectFill" />
         </swiper-item>
     </swiper>

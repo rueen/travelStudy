@@ -1,6 +1,6 @@
 import routeMap from './routeMap';
 
-const visitorRouter = ['Login', 'Index', 'Study', 'ClockIn', 'UserCenter', 'Protocol', 'Policy']; // 游客可访问
+const visitorRouter = ['Login', 'Index', 'Map', 'Study', 'ClockIn', 'UserCenter', 'Protocol', 'Policy']; // 游客可访问
 
 const stopVisitor = (router) => {
     const token = wx.getStorageSync('token');
@@ -54,6 +54,7 @@ const navigateTo = ({ router, extras = {}}) => {
   
 const switchTab = (router) => {
     const isPass = stopVisitor(router);
+    console.log(router, isPass)
     if(!isPass){
         return;
     }

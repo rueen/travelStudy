@@ -1,11 +1,11 @@
 <!--pages/index/components/project/index.wxml-->
 <view class="ui-wrap container">
     <view class="title">主题项目</view>
-    <view class="ui-boxShadow content">
+    <view class="ui-boxShadow content" bindtap="openMapPage">
         <image src="../../../../image/test/banner2.png" class="img" mode="widthFix" />
         <view class="desc">李白诗歌品鉴会</view>
     </view>
-    <view class="ui-boxShadow content">
+    <view class="ui-boxShadow content" bindtap="openMapPage">
         <image src="../../../../image/test/banner3.png" mode="widthFix" class="img" />
         <view class="desc">天姥山读书会</view>
     </view>

@@ -1,36 +1,36 @@
 <!--pages/index/components/cate/index.wxml-->
 <view class="ui-wrap container">
-    <view class="item">
+    <view class="item" bindtap="openMapPage">
         <view class="icon">
             <icon prefix="iconColor" name="study-1" size="60rpx" />
         </view>
         <view class="text">研学</view>
     </view>
-    <view class="item">
+    <view class="item" bindtap="openMapPage">
         <view class="icon">
             <icon prefix="iconColor" name="clockIn-1" size="60rpx" />
         </view>
         <view class="text">打卡</view>
     </view>
-    <view class="item">
+    <view class="item" bindtap="openMapPage">
         <view class="icon">
             <icon prefix="iconColor" name="goods" size="48rpx" />
         </view>
         <view class="text">好物</view>
     </view>
-    <view class="item">
+    <view class="item" bindtap="openMapPage">
         <view class="icon">
             <icon prefix="iconColor" name="maobi-1" size="66rpx" color="#6f5025" />
         </view>
         <view class="text">唐诗宴</view>
     </view>
-    <view class="item">
+    <view class="item" bindtap="openMapPage">
         <view class="icon">
             <icon prefix="iconColor" name="zhusu" size="60rpx"/>
         </view>
         <view class="text">住宿</view>
     </view>
-    <view class="item">
+    <view class="item" bindtap="openMapPage">
         <view class="icon">
             <icon prefix="iconColor" name="car-1" size="66rpx"/>
         </view>
