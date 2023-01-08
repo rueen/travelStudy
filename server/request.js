@@ -2,16 +2,23 @@ import config from '../config';
 import { navigateTo } from '../utils/navigate';
 
 const request = async (
-    {url = '/', data = {}, method = 'GET', isShowLoading = false, isHideFailTips = true} = {}
+    {url = '/', data = {}, method = 'GET', isShowLoading = false, isHideFailTips = true, ...extra} = {}
   ) => {
     return new Promise(async (resolve, reject) => {
         if(isShowLoading){
             wx.showLoading()
         }
+        let header = {
+            "Content-type": "application/x-www-form-urlencoded",
+            "Platform": 50,
+            "Authorization": wx.getStorageSync('token')
+        };
         wx.request({
             url: `${config.baseURL}${url}`,
             data,
             method,
+            header,
+            ...extra,
             success(res) {
                 const { returnCode, msg, data } = res.data;
                 if(`${returnCode}` === '0014'){
@@ -31,7 +38,7 @@ const request = async (
                             icon: 'none'
                         });
                     }
-                    reject({
+                    resolve({
                         success: false,
                         msg
                     });

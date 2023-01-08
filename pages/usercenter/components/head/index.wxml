@@ -1,9 +1,24 @@
 <!--pages/usercenter/components/head/index.wxml-->
 <view class="container">
-    <view class="avatarBox">
-        <image wx:if="{{userInfo && userInfo.avatar}}" src="{{userInfo.avatar}}" mode="aspectFill" class="avatar"></image>
-        <icon wx:else prefix="icon" name="user" size="44rpx" color="#bebebe" bindtap="login" />
+    <button class="avatarBox" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar" wx:if="{{isLogin}}">
+        <image class="avatar" src="{{userInfo.avatar || '../../../../image/default_avatar.png'}}" mode="cover"></image>
+    </button>
+    <view class="avatarBox" bindtap="login" wx:else>
+        <image class="avatar" src="../../../../image/default_avatar.png" mode="cover"></image>
     </view>
-    <text wx:if="{{userInfo && userInfo.nickName}}" class="userName">{{userInfo.nickName}}</text>
+    <block wx:if="{{userInfo && userInfo.nickName}}">
+        <view class="nickname" wx:if="{{!isEditNickname}}" bindtap="handleEditNickname">
+            <text class="userName">{{userInfo.nickName}}</text>
+            <view class="editBtn">
+                <icon name="edit" size="30rpx" color="#666" />
+            </view>
+        </view>
+        <block wx:if="{{isEditNickname}}">
+            <input type="nickname" class="nicknameInput" placeholder="请输入昵称" bindblur="nicknameOnBlur" />
+            <view class="checkBtn" bindtap="nicknameOnBlur">
+                <icon name="check" size="30rpx" color="#fff" />
+            </view>
+        </block>
+    </block>
     <text wx:else class="userName" bindtap="login">请登录</text>
 </view>

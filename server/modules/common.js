@@ -28,6 +28,19 @@ const commonServer = {
     // 获取景区详情
     async scenicInfo(data = {}){
         return await request({ url: `/common/scenicInfo`, data });
+    },
+    // 图片上传
+    async upload(data = {}){
+        return await request({ 
+            url: "/common/upload",
+            data: data.buffer,
+            method: "POST",
+            header: {
+                'content-type': data.contentType,
+                "Platform": 50,
+				"Authorization": wx.getStorageSync('token')
+            },
+         });
     }
 }
 

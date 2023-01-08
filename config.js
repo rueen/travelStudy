@@ -1,7 +1,7 @@
-const ENV = 'PROD';
+const ENV = 'TEST';
 
 const base = {
-    platform: 50
+
 }
 const config = {
     PROD: {
