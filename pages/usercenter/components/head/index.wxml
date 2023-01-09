@@ -14,7 +14,7 @@
             </view>
         </view>
         <block wx:if="{{isEditNickname}}">
-            <input type="nickname" class="nicknameInput" placeholder="请输入昵称" bindblur="nicknameOnBlur" />
+            <input type="nickname" value="{{userInfo.nickName}}" class="nicknameInput" placeholder="请输入昵称" bindblur="nicknameOnBlur" />
             <view class="checkBtn" bindtap="nicknameOnBlur">
                 <icon name="check" size="30rpx" color="#fff" />
             </view>

@@ -1,4 +1,4 @@
-const ENV = 'TEST';
+const ENV = 'PROD';
 
 const base = {
 
