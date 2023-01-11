@@ -6,9 +6,9 @@
     <view class="avatarBox" bindtap="login" wx:else>
         <image class="avatar" src="../../../../image/default_avatar.png" mode="cover"></image>
     </view>
-    <block wx:if="{{userInfo && userInfo.nickName}}">
+    <block wx:if="{{isLogin}}">
         <view class="nickname" wx:if="{{!isEditNickname}}" bindtap="handleEditNickname">
-            <text class="userName">{{userInfo.nickName}}</text>
+            <text class="userName">{{userInfo.nickName || '微信用户'}}</text>
             <view class="editBtn">
                 <icon name="edit" size="30rpx" color="#666" />
             </view>

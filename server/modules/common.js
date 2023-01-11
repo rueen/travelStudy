@@ -40,7 +40,7 @@ const commonServer = {
                 "Platform": 50,
 				"Authorization": wx.getStorageSync('token')
             },
-         });
+        });
     }
 }
 
